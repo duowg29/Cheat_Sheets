@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Foxxer Math 1002 - Lecture One",
+        "content": [
+            {
+                "header": "Phép toán số học",
+                "text": "Giới thiệu Đại số, Thứ tự thực hiện phép toán."
+            },
+            {
+                "header": "Giải phương trình",
+                "text": "Ví dụ: 2x + 3 = 7 → x = 2."
+            },
+            {
+                "header": "Hàm số",
+                "text": "Giới thiệu Hàm số cơ bản trong toán học."
+            }
+        ]
+    },
+    {
+        "title": "Geometry - Semester 1",
+        "content": [
+            {
+                "header": "Góc & số đo",
+                "text": "Các loại góc và cách tính số đo góc."
+            },
+            {
+                "header": "Tam giác",
+                "text": "Tính đồng dạng, diện tích và chu vi tam giác."
+            },
+            {
+                "header": "Hình tròn",
+                "text": "Chu vi: C = 2πr, Diện tích: A = πr²."
+            }
+        ]
+    },
+    {
+        "title": "Metric System - Weights & Measures",
+        "content": [
+            {
+                "header": "Chiều dài",
+                "text": "1 cm = 10 mm, 1 m = 100 cm, 1 km = 1000 m."
+            },
+            {
+                "header": "Khối lượng",
+                "text": "1 g = 1000 mg, 1 kg = 1000 g, 1 tấn = 1000 kg."
+            },
+            { "header": "Thể tích", "text": "1 l = 1000 ml, 1 hl = 100 l." }
+        ]
+    },
+    {
+        "title": "Imperial System - Weights & Measures",
+        "content": [
+            {
+                "header": "Chiều dài",
+                "text": "1 foot = 12 inches, 1 yard = 3 feet, 1 mile = 1760 yards."
+            },
+            {
+                "header": "Khối lượng",
+                "text": "1 ounce = 16 drams, 1 pound = 16 ounces, 1 tấn = 2000 pounds."
+            },
+            {
+                "header": "Thể tích",
+                "text": "1 pint = 20 fluid ounces, 1 gallon = 4 quarts."
+            }
+        ]
+    }
+]
