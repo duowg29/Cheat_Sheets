@@ -33,7 +33,7 @@ const config: Phaser.Types.Core.GameConfig = {
             debugShowVelocity: false,
         },
     },
-    scene: [Boot, MainGame, LoadingScene, GamePlayScene],
+    scene: [GamePlayScene],
 };
 
 const StartGame = (parent: string) => {

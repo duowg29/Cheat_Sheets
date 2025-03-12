@@ -41,3 +41,17 @@ The `preload-asset-pack.json` in this template contains the rest of the assets t
 [Learn more about Asset Pack loading in Phaser](https://newdocs.phaser.io/docs/3.80.0/Phaser.Loader.LoaderPlugin#pack)
 
 ### DƯƠNG
+
+# cheatsheets
+
+sửa lại tính năng responsive(khi resize window thì không được thay đổi kích thước các ô , mà phải tự responsive để tính toán để ẩn bớt số ô tối đa trên 1 trang)
+xuất ảnh pdf (watermark) có ảnh, họa tiết trang trí
+tìm kiếm
+thêm các chế độ zoom
+respon theo chiều ngang
+thêm tên cho cheatsheet
+màu chữ, màu nền , hiệu ứng chữ (chỉ lúc xem trên ưeb còn in r thì không) thêm hiệu ứng chuyển đổi giữa các header (làm thư viện text animation(common))
+
+# worksheet
+
+(điền ttin nhập như tên, lớp,...(rỗng) thêm thời gian làm bài, điểm số)
