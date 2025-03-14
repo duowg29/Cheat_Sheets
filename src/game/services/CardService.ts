@@ -10,6 +10,8 @@ export default class CardService {
     ): Phaser.GameObjects.Container {
         const cardWidth = scene.scale.width * 0.3;
         const cardHeight = scene.scale.height * 0.2;
+        const padding = 10;
+
         const card = scene.add.container(x, y);
 
         const background = scene.add
@@ -18,24 +20,32 @@ export default class CardService {
             .setOrigin(0.5);
 
         const headerText = scene.add.text(
-            -cardWidth / 2 + 10,
-            -cardHeight / 2 + 10,
+            -cardWidth / 2 + padding,
+            -cardHeight / 2 + padding,
             header,
             {
                 fontSize: `${scene.scale.width * 0.015}px`,
                 fontStyle: "bold",
                 color: "#222",
+                wordWrap: {
+                    width: cardWidth - padding * 2,
+                    useAdvancedWrap: true,
+                },
             }
         );
 
         const contentText = scene.add.text(
-            -cardWidth / 2 + 10,
+            -cardWidth / 2 + padding,
             -cardHeight / 2 + 40,
             text,
             {
                 fontSize: `${scene.scale.width * 0.012}px`,
                 color: "#444",
-                wordWrap: { width: cardWidth - 20 },
+                wordWrap: {
+                    width: cardWidth - padding * 2,
+                    useAdvancedWrap: true,
+                },
+                align: "left",
             }
         );
 

@@ -46,7 +46,7 @@ export default class GamePlayScene extends Phaser.Scene {
         );
 
         this.cheatsheetNameText = this.add
-            .text(this.scale.width * 0.5, this.scale.height * 0.1, "", {
+            .text(this.scale.width * 0.5, this.scale.height * 0.13, "", {
                 fontSize: `${this.scale.width * 0.02}px`,
                 color: "#000",
                 fontStyle: "bold",
@@ -59,7 +59,6 @@ export default class GamePlayScene extends Phaser.Scene {
             (dir) => this.scrollPage(dir)
         );
 
-        // Thêm các nút mũi tên lên/xuống
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,
