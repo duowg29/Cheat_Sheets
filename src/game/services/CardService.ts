@@ -19,28 +19,28 @@ export default class CardService {
             .setStrokeStyle(3, 0x000000)
             .setOrigin(0.5);
 
-        const headerText = scene.add.text(
-            -cardWidth / 2 + padding,
-            -cardHeight / 2 + padding,
-            header,
-            {
+        const headerText = scene.add
+            .text(0, -cardHeight / 2 + padding, header, {
+                fontFamily: "Arial",
                 fontSize: `${scene.scale.width * 0.015}px`,
                 fontStyle: "bold",
                 color: "#222",
+                align: "center",
                 wordWrap: {
                     width: cardWidth - padding * 2,
                     useAdvancedWrap: true,
                 },
-            }
-        );
+            })
+            .setOrigin(0.5, 0);
 
         const contentText = scene.add.text(
             -cardWidth / 2 + padding,
-            -cardHeight / 2 + 40,
+            -cardHeight / 2 + 90,
             text,
             {
+                fontFamily: "Arial",
                 fontSize: `${scene.scale.width * 0.012}px`,
-                color: "#444",
+                color: "#222",
                 wordWrap: {
                     width: cardWidth - padding * 2,
                     useAdvancedWrap: true,

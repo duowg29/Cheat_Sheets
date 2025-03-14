@@ -17,6 +17,7 @@ export default class UIService {
                 scene.scale.width * 0.1 + index * (buttonWidth + buttonSpacing);
             const button = scene.add
                 .text(buttonX, scene.scale.height * 0.05, cls.title, {
+                    fontFamily: "Arial",
                     fontSize: `${scene.scale.width * 0.02}px`,
                     color: index === currentClassIndex ? "#000" : "#FFF",
                     backgroundColor:

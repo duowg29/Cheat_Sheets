@@ -173,6 +173,82 @@
                         ]
                     }
                 ]
+            },
+            {
+                "id": 1,
+                "name": "Tiếng Việt - Học chữ cái và Tập đọc",
+                "headers": [
+                    {
+                        "id": 1,
+                        "title": "Bảng chữ cái Tiếng Việt",
+                        "contents": [
+                            {
+                                "id": 1,
+                                "text": "Học 29 chữ cái tiếng Việt và cách phát âm"
+                            },
+                            {
+                                "id": 2,
+                                "text": "Nhận diện chữ in hoa, in thường"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "title": "Ghép vần và đánh vần",
+                        "contents": [
+                            {
+                                "id": 3,
+                                "text": "Làm quen với ghép vần đơn giản như ba, ca, me"
+                            },
+                            {
+                                "id": 4,
+                                "text": "Đọc các từ có dấu thanh: à, á, ả, ã, ạ"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "title": "Tập đọc từ và câu ngắn",
+                        "contents": [
+                            {
+                                "id": 5,
+                                "text": "Đọc các câu ngắn như 'Mẹ đi chợ', 'Bé vui chơi'"
+                            },
+                            {
+                                "id": 6,
+                                "text": "Luyện tập đọc trôi chảy các câu đơn giản"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "title": "Chính tả cơ bản",
+                        "contents": [
+                            {
+                                "id": 7,
+                                "text": "Tập viết các chữ cái cơ bản"
+                            },
+                            {
+                                "id": 8,
+                                "text": "Viết các từ đơn giản như 'bố', 'mẹ', 'bé'"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "title": "Luyện nghe và kể chuyện",
+                        "contents": [
+                            {
+                                "id": 9,
+                                "text": "Nghe và kể lại các câu chuyện ngắn"
+                            },
+                            {
+                                "id": 10,
+                                "text": "Trả lời câu hỏi về nội dung truyện"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -326,6 +402,82 @@
                             {
                                 "id": 22,
                                 "text": "Học cách cộng, trừ tiền trong giao dịch mua bán đơn giản"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Tiếng Việt - Ngữ pháp và Chính tả",
+                "headers": [
+                    {
+                        "id": 1,
+                        "title": "Vần và âm tiết",
+                        "contents": [
+                            {
+                                "id": 1,
+                                "text": "Nhận diện vần và âm tiết trong từ"
+                            },
+                            {
+                                "id": 2,
+                                "text": "Phân biệt nguyên âm đơn, nguyên âm đôi, phụ âm đầu và phụ âm cuối"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "title": "Chính tả",
+                        "contents": [
+                            {
+                                "id": 3,
+                                "text": "Phân biệt các âm dễ nhầm như s/x, ch/tr, r/d/gi"
+                            },
+                            {
+                                "id": 4,
+                                "text": "Luyện viết đúng chính tả qua bài tập"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "title": "Câu đơn và câu ghép",
+                        "contents": [
+                            {
+                                "id": 5,
+                                "text": "Nhận biết câu đơn và câu ghép"
+                            },
+                            {
+                                "id": 6,
+                                "text": "Thực hành viết câu đơn và câu ghép"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "title": "Từ loại",
+                        "contents": [
+                            {
+                                "id": 7,
+                                "text": "Phân biệt danh từ, động từ, tính từ"
+                            },
+                            {
+                                "id": 8,
+                                "text": "Sử dụng đúng từ loại trong câu"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "title": "Viết đoạn văn ngắn",
+                        "contents": [
+                            {
+                                "id": 9,
+                                "text": "Luyện tập viết đoạn văn ngắn về chủ đề gia đình, bạn bè, trường lớp"
+                            },
+                            {
+                                "id": 10,
+                                "text": "Sử dụng dấu câu đúng cách"
                             }
                         ]
                     }
