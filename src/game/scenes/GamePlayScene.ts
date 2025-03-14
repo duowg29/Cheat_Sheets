@@ -1,14 +1,19 @@
+import ClassDTO from "../dto/ClassDTO";
+import DataService from "../services/DataService";
+import UIService from "../services/UIService";
+import NavigationService from "../services/NavigationService";
+import CardService from "../services/CardService";
+
 export default class GamePlayScene extends Phaser.Scene {
-    private cheatsheets: {
-        title: string;
-        content: { header: string; text: string }[];
-    }[] = [];
-    private currentIndex: number = 0;
+    private classes: ClassDTO[] = [];
+    private currentClassIndex: number = 0;
+    private currentCheatsheetIndex: number = 0;
     private scrollIndex: number = 0;
-    private titleText!: Phaser.GameObjects.Text;
+
+    private classButtons: Phaser.GameObjects.Text[] = [];
+    private cheatsheetNameText!: Phaser.GameObjects.Text;
     private cards: Phaser.GameObjects.Container[] = [];
     private maxCardsPerPage: number = 6;
-    private titleButtons: Phaser.GameObjects.Text[] = [];
     private upButton!: Phaser.GameObjects.Text;
     private downButton!: Phaser.GameObjects.Text;
 
@@ -22,45 +27,39 @@ export default class GamePlayScene extends Phaser.Scene {
 
     create(): void {
         const jsonData = this.cache.json.get("cheatsheets");
-        if (!jsonData || jsonData.length === 0) {
-            console.error("Lỗi: Không có dữ liệu JSON");
-            return;
-        }
-        this.cheatsheets = jsonData;
+        this.classes = DataService.loadClasses(jsonData);
 
-        const buttonWidth = this.scale.width * 0.15;
-        const buttonHeight = this.scale.height * 0.05;
-        const buttonSpacing = this.scale.width * 0.02;
-
-        jsonData.slice(0, 5).forEach((item: any, index: number) => {
-            const buttonX =
-                this.scale.width * 0.1 + index * (buttonWidth + buttonSpacing);
-            const button = this.add
-                .text(buttonX, this.scale.height * 0.05, item.title, {
-                    fontSize: `${this.scale.width * 0.02}px`,
-                    color: index === this.currentIndex ? "#000" : "#FFF",
-                    backgroundColor:
-                        index === this.currentIndex ? "#FFD700" : "#000",
-                    padding: { left: 10, right: 10, top: 5, bottom: 5 },
-                })
-                .setInteractive()
-                .setOrigin(0.5);
-
-            button.on("pointerdown", () => {
-                this.currentIndex = index;
+        this.classButtons = UIService.createClassButtons(
+            this,
+            this.classes,
+            this.currentClassIndex,
+            (index: number) => {
+                this.currentClassIndex = index;
+                this.currentCheatsheetIndex = 0;
                 this.scrollIndex = 0;
+                UIService.updateClassButtons(
+                    this.classButtons,
+                    this.currentClassIndex
+                );
                 this.updatePage();
-            });
+            }
+        );
 
-            this.titleButtons.push(button);
-        });
+        this.cheatsheetNameText = this.add
+            .text(this.scale.width * 0.5, this.scale.height * 0.1, "", {
+                fontSize: `${this.scale.width * 0.02}px`,
+                color: "#000",
+                fontStyle: "bold",
+            })
+            .setOrigin(0.5);
 
-        this.input.keyboard?.on("keydown-LEFT", () => this.changeTitle(-1));
-        this.input.keyboard?.on("keydown-RIGHT", () => this.changeTitle(1));
-        this.input.keyboard?.on("keydown-UP", () => this.scrollHeaders(-1));
-        this.input.keyboard?.on("keydown-DOWN", () => this.scrollHeaders(1));
+        NavigationService.setupKeyboardControls(
+            this,
+            (dir) => this.changeCheatsheet(dir),
+            (dir) => this.scrollPage(dir)
+        );
 
-        // Thêm nút lên/xuống bên phải màn hình
+        // Thêm các nút mũi tên lên/xuống
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,
@@ -81,111 +80,68 @@ export default class GamePlayScene extends Phaser.Scene {
             .setInteractive()
             .setOrigin(0.5);
 
-        this.upButton.on("pointerdown", () => this.scrollHeaders(-1));
-        this.downButton.on("pointerdown", () => this.scrollHeaders(1));
+        this.upButton.on("pointerdown", () => this.scrollPage(-1));
+        this.downButton.on("pointerdown", () => this.scrollPage(1));
 
         this.updatePage();
     }
 
-    private changeTitle(direction: number): void {
-        this.currentIndex = Phaser.Math.Wrap(
-            this.currentIndex + direction,
+    private changeCheatsheet(direction: number): void {
+        this.currentCheatsheetIndex = Phaser.Math.Wrap(
+            this.currentCheatsheetIndex + direction,
             0,
-            this.cheatsheets.length
+            this.classes[this.currentClassIndex].cheatsheets.length
         );
         this.scrollIndex = 0;
         this.updatePage();
     }
 
-    private scrollHeaders(direction: number): void {
+    private scrollPage(direction: number): void {
+        const currentCheatsheet =
+            this.classes[this.currentClassIndex].cheatsheets[
+                this.currentCheatsheetIndex
+            ];
+        const totalHeaders = currentCheatsheet.headers.length;
+
         this.scrollIndex = Phaser.Math.Clamp(
-            this.scrollIndex + direction,
+            this.scrollIndex + direction * this.maxCardsPerPage,
             0,
-            this.getMaxScroll()
+            Math.max(0, totalHeaders - this.maxCardsPerPage)
         );
+
         this.updatePage();
     }
 
     private updatePage(): void {
-        const cheat = this.cheatsheets[this.currentIndex];
+        const currentCheatsheet =
+            this.classes[this.currentClassIndex].cheatsheets[
+                this.currentCheatsheetIndex
+            ];
+        this.cheatsheetNameText.setText(currentCheatsheet.name);
+
         this.cards.forEach((card) => card.destroy());
         this.cards = [];
-        this.titleText?.setText(cheat.title);
 
-        this.titleButtons.forEach((button, index) => {
-            button.setColor(index === this.currentIndex ? "#000" : "#FFF");
-            button.setBackgroundColor(
-                index === this.currentIndex ? "#FFD700" : "#000"
+        const headersToShow = currentCheatsheet.headers.slice(
+            this.scrollIndex,
+            this.scrollIndex + this.maxCardsPerPage
+        );
+
+        headersToShow.forEach((header, index) => {
+            const row = Math.floor(index / 2);
+            const col = index % 2;
+
+            const cardX = this.scale.width * (0.3 + col * 0.4);
+            const cardY = this.scale.height * (0.3 + row * 0.2);
+
+            const card = CardService.createCard(
+                this,
+                cardX,
+                cardY,
+                header.title,
+                header.contents.map((c) => c.text).join("\n")
             );
+            this.cards.push(card);
         });
-
-        const startIdx = this.scrollIndex * this.maxCardsPerPage;
-        const endIdx = Math.min(
-            startIdx + this.maxCardsPerPage,
-            cheat.content.length
-        );
-        const cols = 2;
-        const rows = Math.ceil(this.maxCardsPerPage / cols);
-        const cardWidth = this.scale.width * 0.4;
-        const cardHeight = this.scale.height * 0.2;
-        const startX = this.scale.width * 0.3;
-        const startY = this.scale.height * 0.3;
-
-        cheat.content.slice(startIdx, endIdx).forEach((item, index) => {
-            const x =
-                startX + (index % cols) * (cardWidth + this.scale.width * 0.02);
-            const y =
-                startY +
-                Math.floor(index / cols) *
-                    (cardHeight + this.scale.height * 0.02);
-            this.cards.push(
-                this.createCard(x, y, item.header, item.text, cardWidth)
-            );
-        });
-    }
-
-    private createCard(
-        x: number,
-        y: number,
-        header: string,
-        text: string,
-        cardWidth: number
-    ): Phaser.GameObjects.Container {
-        const cardHeight = this.scale.height * 0.2;
-        const card = this.add.container(x, y);
-
-        const background = this.add
-            .rectangle(0, 0, cardWidth, cardHeight, 0xffffff)
-            .setStrokeStyle(3, 0x000000)
-            .setOrigin(0.5);
-        const headerText = this.add.text(
-            -cardWidth / 2 + 15,
-            -cardHeight / 2 + 15,
-            header,
-            {
-                fontSize: `${this.scale.width * 0.015}px`,
-                fontStyle: "bold",
-                color: "#222",
-                wordWrap: { width: cardWidth - 30 },
-            }
-        );
-        const contentText = this.add.text(
-            -cardWidth / 2 + 15,
-            -cardHeight / 2 + 50,
-            text,
-            {
-                fontSize: `${this.scale.width * 0.012}px`,
-                color: "#444",
-                wordWrap: { width: cardWidth - 30 },
-            }
-        );
-
-        card.add([background, headerText, contentText]);
-        return card;
-    }
-
-    private getMaxScroll(): number {
-        const cheat = this.cheatsheets[this.currentIndex];
-        return Math.ceil(cheat.content.length / this.maxCardsPerPage) - 1;
     }
 }
