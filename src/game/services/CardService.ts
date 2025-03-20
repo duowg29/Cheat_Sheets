@@ -6,7 +6,7 @@ export default class CardService {
         scene: Phaser.Scene,
         x: number,
         y: number,
-        cardDTO: CardDTO // Nhận CardDTO thay vì các tham số riêng biệt
+        cardDTO: CardDTO
     ): Phaser.GameObjects.Container {
         const cardWidth = scene.scale.width * 0.3;
         const cardHeight = scene.scale.height * 0.2;
@@ -33,16 +33,13 @@ export default class CardService {
             })
             .setOrigin(0.5, 0);
 
-        // Không cần contentText nữa vì chỉ hiển thị header
         card.add([background, headerText]);
 
-        // Đặt kích thước cho container trước khi thiết lập tính tương tác
         card.setSize(cardWidth, cardHeight);
 
-        // Thiết lập card là interactive và phát sự kiện khi chọn thẻ
         card.setInteractive().on("pointerup", () => {
             console.log("Card selected:", cardDTO.header);
-            scene.events.emit("card-selected", cardDTO); // Phát sự kiện chọn card
+            scene.events.emit("card-selected", cardDTO);
         });
 
         return card;

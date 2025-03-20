@@ -8,20 +8,18 @@ export default class BoxService {
         title: string,
         text: string
     ): Phaser.GameObjects.Container {
-        const boxWidth = scene.scale.width * 0.35; // Chiều rộng của box
-        const boxHeight = scene.scale.height * 0.25; // Chiều cao của box
-        const padding = 12; // Padding cho box
+        const boxWidth = scene.scale.width * 0.35;
+        const boxHeight = scene.scale.height * 0.25;
+        const padding = 12;
 
-        const box = scene.add.container(x, y); // Tạo một container cho box
+        const box = scene.add.container(x, y);
 
-        // Tạo nền cho box
         const background = scene.add
-            .rectangle(0, 0, boxWidth, boxHeight, 0xffffff) // Màu nền trắng
-            .setStrokeStyle(4, 0x000000) // Viền đen
+            .rectangle(0, 0, boxWidth, boxHeight, 0xffffff)
+            .setStrokeStyle(4, 0x000000)
             .setOrigin(0.5)
-            .setSize(boxWidth, boxHeight); // Thiết lập kích thước cho nền box
+            .setSize(boxWidth, boxHeight);
 
-        // Tạo tiêu đề cho box
         const titleText = scene.add
             .text(0, -boxHeight / 2 + padding, title, {
                 fontFamily: "Arial",
@@ -36,7 +34,6 @@ export default class BoxService {
             })
             .setOrigin(0.5, 0);
 
-        // Tạo nội dung cho box
         const contentText = scene.add.text(
             -boxWidth / 2 + padding,
             -boxHeight / 2 + 90,
@@ -53,19 +50,15 @@ export default class BoxService {
             }
         );
 
-        // Thêm các phần tử vào box
         box.add([background, titleText, contentText]);
 
-        // Thiết lập sự kiện khi người dùng bấm vào box
         box.setInteractive().on("pointerup", () => {
             console.log(`Box selected: ${title}`);
-            // Gửi thông tin của box đã chọn vào DetailContentScene
             scene.scene.start("DetailContentScene", {
                 header: { title, text },
             });
         });
 
-        // Thiết lập kích thước cho container box để setInteractive hoạt động
         box.setSize(boxWidth, boxHeight);
 
         return box;

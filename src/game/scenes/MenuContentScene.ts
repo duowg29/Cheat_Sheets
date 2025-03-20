@@ -1,13 +1,13 @@
 import Phaser from "phaser";
-import BoxService from "../services/BoxService"; // Import BoxService
-import ContentDTO from "../dto/ContentDTO"; // Import DTO chứa nội dung
+import BoxService from "../services/BoxService";
+import ContentDTO from "../dto/ContentDTO";
 
 export default class MenuContentScene extends Phaser.Scene {
-    private cheatsheet: any; // Dữ liệu cheatsheet được truyền từ GamePlayScene
-    private currentHeaderIndex: number = 0; // Chỉ số của header được chọn
-    private boxes: Phaser.GameObjects.Container[] = []; // Mảng chứa các box
-    private maxBoxesPerPage: number = 6; // Số ô tối đa trên mỗi trang
-    private scrollIndex: number = 0; // Chỉ số cuộn trang
+    private cheatsheet: any;
+    private currentHeaderIndex: number = 0;
+    private boxes: Phaser.GameObjects.Container[] = [];
+    private maxBoxesPerPage: number = 6;
+    private scrollIndex: number = 0;
 
     private upButton!: Phaser.GameObjects.Text;
     private downButton!: Phaser.GameObjects.Text;
@@ -17,12 +17,11 @@ export default class MenuContentScene extends Phaser.Scene {
     }
 
     init(data: any): void {
-        // Kiểm tra dữ liệu đã được truyền vào hay chưa
         if (!data || !data.cheatsheet) {
             console.error("No cheatsheet data found in MenuContentScene");
             return;
         }
-        this.cheatsheet = data.cheatsheet; // Lấy cheatsheet từ dữ liệu đã truyền từ GamePlayScene
+        this.cheatsheet = data.cheatsheet;
     }
 
     create(): void {
@@ -41,7 +40,6 @@ export default class MenuContentScene extends Phaser.Scene {
             )
             .setOrigin(0.5);
 
-        // Kiểm tra lại cheatsheet và headers
         if (!this.cheatsheet || !this.cheatsheet.headers) {
             console.error(
                 "Cheatsheet or headers are missing in MenuContentScene."
@@ -51,7 +49,6 @@ export default class MenuContentScene extends Phaser.Scene {
 
         const headers = this.cheatsheet.headers;
 
-        // Lặp qua các header và tạo box
         headers.forEach((header: any, index: number) => {
             const row = Math.floor(index / 2);
             const col = index % 2;
@@ -70,23 +67,18 @@ export default class MenuContentScene extends Phaser.Scene {
                     .substring(0, 50) + "..."
             );
 
-            // Đảm bảo box có setSize trước khi setInteractive
             box.setSize(this.scale.width * 0.3, this.scale.height * 0.2);
 
-            // Thêm sự kiện khi người dùng nhấn vào box
-            // Khi bấm vào Box
             box.setInteractive().on("pointerup", () => {
                 this.currentHeaderIndex = index;
-                // Truyền thông tin header vào DetailContentScene
                 this.scene.start("DetailContentScene", {
-                    header: header, // Truyền header vào
+                    header: header,
                 });
             });
 
             this.boxes.push(box);
         });
 
-        // Thêm nút điều hướng trang
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,
@@ -110,7 +102,6 @@ export default class MenuContentScene extends Phaser.Scene {
         this.upButton.on("pointerdown", () => this.scrollPage(-1));
         this.downButton.on("pointerdown", () => this.scrollPage(1));
 
-        // Thêm nút "Back"
         const backButton = this.add
             .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
                 fontFamily: "Arial",
@@ -140,7 +131,5 @@ export default class MenuContentScene extends Phaser.Scene {
         this.updatePage();
     }
 
-    private updatePage(): void {
-        // Logic for updating the page if you want to implement dynamic page change
-    }
+    private updatePage(): void {}
 }
