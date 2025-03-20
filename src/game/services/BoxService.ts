@@ -52,14 +52,15 @@ export default class BoxService {
 
         box.add([background, titleText, contentText]);
 
-        box.setInteractive().on("pointerup", () => {
+        box.setSize(boxWidth, boxHeight);
+        box.setInteractive();
+
+        box.on("pointerup", () => {
             console.log(`Box selected: ${title}`);
             scene.scene.start("DetailContentScene", {
                 header: { title, text },
             });
         });
-
-        box.setSize(boxWidth, boxHeight);
 
         return box;
     }
