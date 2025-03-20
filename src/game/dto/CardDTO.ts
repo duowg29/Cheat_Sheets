@@ -1,9 +1,9 @@
 export default class CardDTO {
-    id: number;
+    id: string;
     header: string;
     cardId: string;
 
-    constructor(id: number, header: string, cardId: string) {
+    constructor(id: string, header: string, cardId: string) {
         this.id = id;
         this.header = header;
         this.cardId = cardId;

@@ -86,13 +86,18 @@ export default class GamePlayScene extends Phaser.Scene {
 
         this.events.on("card-selected", (cardDTO: CardDTO) => {
             console.log("Card selected:", cardDTO.header);
-            this.currentCheatsheetIndex = this.scrollIndex + cardDTO.id;
-            this.scene.start("MenuContentScene", {
-                cheatsheet:
-                    this.classes[this.currentClassIndex].cheatsheets[
-                        this.currentCheatsheetIndex
-                    ],
-            });
+
+            const selectedCheatsheet = this.classes[
+                this.currentClassIndex
+            ].cheatsheets.find(
+                (sheet) => String(sheet.id) === String(cardDTO.id)
+            );
+
+            if (selectedCheatsheet) {
+                this.scene.start("MenuContentScene", {
+                    cheatsheet: selectedCheatsheet,
+                });
+            }
         });
 
         this.updatePage();
@@ -145,7 +150,11 @@ export default class GamePlayScene extends Phaser.Scene {
         cheatsheetsToShow.forEach((cheatsheet, index) => {
             const cardId = `card${this.scrollIndex + index + 1}`;
 
-            const cardDTO = new CardDTO(cheatsheet.id, cheatsheet.name, cardId);
+            const cardDTO = new CardDTO(
+                String(cheatsheet.id),
+                cheatsheet.name,
+                cardId
+            );
 
             const row = Math.floor(index / 2);
             const col = index % 2;

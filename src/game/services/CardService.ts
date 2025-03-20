@@ -20,7 +20,7 @@ export default class CardService {
             .setOrigin(0.5);
 
         const headerText = scene.add
-            .text(0, -cardHeight / 2 + padding, cardDTO.header, {
+            .text(0, 0, cardDTO.header, {
                 fontFamily: "Arial",
                 fontSize: `${scene.scale.width * 0.015}px`,
                 fontStyle: "bold",
@@ -31,7 +31,7 @@ export default class CardService {
                     useAdvancedWrap: true,
                 },
             })
-            .setOrigin(0.5, 0);
+            .setOrigin(0.5); // Căn giữa cả chiều ngang và dọc
 
         card.add([background, headerText]);
 

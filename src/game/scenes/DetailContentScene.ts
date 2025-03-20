@@ -5,6 +5,7 @@ export default class DetailContentScene extends Phaser.Scene {
     private headerTitleText!: Phaser.GameObjects.Text;
     private contentText!: Phaser.GameObjects.Text;
     private backButton!: Phaser.GameObjects.Text;
+    private background!: Phaser.GameObjects.Rectangle;
 
     constructor() {
         super({ key: "DetailContentScene" });
@@ -22,6 +23,11 @@ export default class DetailContentScene extends Phaser.Scene {
             return;
         }
 
+        this.background = this.add
+            .rectangle(0, 0, this.scale.width, this.scale.height, 0xffffff)
+            .setOrigin(0)
+            .setDepth(-1);
+
         this.headerTitleText = this.add
             .text(
                 this.scale.width * 0.5,
@@ -29,8 +35,8 @@ export default class DetailContentScene extends Phaser.Scene {
                 header.title,
                 {
                     fontFamily: "Arial",
-                    fontSize: `${this.scale.width * 0.04}px`,
-                    color: "#000",
+                    fontSize: `${this.scale.width * 0.06}px`,
+                    color: "#333",
                     fontStyle: "bold",
                     align: "center",
                 }
@@ -44,13 +50,13 @@ export default class DetailContentScene extends Phaser.Scene {
         this.contentText = this.add
             .text(
                 this.scale.width * 0.5,
-                this.scale.height * 0.25,
+                this.scale.height * 0.5,
                 contentString,
                 {
                     fontFamily: "Arial",
-                    fontSize: `${this.scale.width * 0.02}px`,
-                    color: "#222",
-                    align: "left",
+                    fontSize: `${this.scale.width * 0.015}px`,
+                    color: "#555",
+                    align: "center",
                     wordWrap: {
                         width: this.scale.width * 0.8,
                         useAdvancedWrap: true,
@@ -59,24 +65,22 @@ export default class DetailContentScene extends Phaser.Scene {
             )
             .setOrigin(0.5);
 
-        //
-        // this.backButton = this.add
-        //     .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
-        //         fontFamily: "Arial",
-        //         fontSize: `${this.scale.width * 0.03}px`,
-        //         color: "#FFF",
-        //         backgroundColor: "#000",
-        //         padding: { left: 10, right: 10, top: 5, bottom: 5 },
-        //     })
-        //     .setInteractive()
-        //     .setOrigin(0);
+        this.backButton = this.add
+            .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
+                fontFamily: "Arial",
+                fontSize: `${this.scale.width * 0.04}px`,
+                color: "#FFF",
+                backgroundColor: "#4CAF50",
+                padding: { left: 15, right: 15, top: 10, bottom: 10 },
+                stroke: "#000",
+                strokeThickness: 3,
+            })
+            .setInteractive()
+            .setOrigin(0);
 
-        //
-        // this.backButton.on("pointerup", () => {
-        //     this.scene.stop("DetailContentScene");
-        //     this.scene.start("MenuContentScene", {
-        //         cheatsheet: this.cache.json.get("cheatsheets"),
-        //     });
-        // });
+        this.backButton.on("pointerup", () => {
+            this.scene.stop("DetailContentScene");
+            this.scene.start("GamePlayScene");
+        });
     }
 }

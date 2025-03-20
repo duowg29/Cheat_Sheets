@@ -1,284 +1,326 @@
 [
     {
-        "id": 1,
+        "id": "lop1",
         "title": "Lớp 1",
         "cheatsheets": [
             {
-                "id": 1,
+                "id": "sheet1",
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header1",
                         "title": "Số đếm từ 1 đến 100",
                         "contents": [
-                            { "id": 1, "text": "Học cách đếm số từ 1 đến 100" },
-                            { "id": 2, "text": "Nhận diện số chẵn và số lẻ" },
-                            { "id": 3, "text": "Thực hành đếm xuôi, đếm ngược" }
+                            {
+                                "id": "content1",
+                                "text": "Học cách đếm số từ 1 đến 100"
+                            },
+                            {
+                                "id": "content2",
+                                "text": "Nhận diện số chẵn và số lẻ"
+                            },
+                            {
+                                "id": "content3",
+                                "text": "Thực hành đếm xuôi, đếm ngược"
+                            }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header2",
                         "title": "So sánh số lượng và các số trong phạm vi 100",
                         "contents": [
                             {
-                                "id": 4,
+                                "id": "content4",
                                 "text": "Nhận biết số lớn hơn, số bé hơn, số bằng nhau"
                             },
                             {
-                                "id": 5,
+                                "id": "content5",
                                 "text": "Xếp thứ tự các số theo chiều tăng dần và giảm dần"
                             }
                         ]
                     },
                     {
-                        "id": 3,
+                        "id": "header3",
                         "title": "Phép cộng trong phạm vi 10",
                         "contents": [
                             {
-                                "id": 6,
+                                "id": "content6",
                                 "text": "Giới thiệu phép cộng và dấu cộng (+)"
                             },
-                            { "id": 7, "text": "Cộng hai số trong phạm vi 10" },
                             {
-                                "id": 8,
+                                "id": "content7",
+                                "text": "Cộng hai số trong phạm vi 10"
+                            },
+                            {
+                                "id": "content8",
                                 "text": "Thực hành tính nhẩm và sử dụng que tính"
                             }
                         ]
-                    },
-                    {
-                        "id": 4,
-                        "title": "Phép trừ trong phạm vi 10",
-                        "contents": [
-                            {
-                                "id": 9,
-                                "text": "Giới thiệu phép trừ và dấu trừ (-)"
-                            },
-                            { "id": 10, "text": "Trừ hai số trong phạm vi 10" },
-                            {
-                                "id": 11,
-                                "text": "Thực hành với que tính hoặc hình ảnh minh họa"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 5,
-                        "title": "Phép cộng và phép trừ trong phạm vi 20",
-                        "contents": [
-                            {
-                                "id": 12,
-                                "text": "Mở rộng phép cộng, trừ với số lớn hơn 10"
-                            },
-                            {
-                                "id": 13,
-                                "text": "Thực hành cộng, trừ có nhớ và không nhớ"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 6,
-                        "title": "Phép cộng và phép trừ trong phạm vi 100",
-                        "contents": [
-                            {
-                                "id": 14,
-                                "text": "Cộng, trừ các số có hai chữ số"
-                            },
-                            {
-                                "id": 15,
-                                "text": "Áp dụng các quy tắc tính toán đúng cách"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 7,
-                        "title": "Bài toán có lời văn",
-                        "contents": [
-                            {
-                                "id": 16,
-                                "text": "Đọc, hiểu đề bài toán có lời văn"
-                            },
-                            {
-                                "id": 17,
-                                "text": "Xác định dữ kiện và phép toán phù hợp"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 8,
-                        "title": "Hình học cơ bản",
-                        "contents": [
-                            {
-                                "id": 18,
-                                "text": "Nhận biết các hình: vuông, tròn, tam giác, chữ nhật"
-                            },
-                            {
-                                "id": 19,
-                                "text": "So sánh kích thước và đặc điểm các hình"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 9,
-                        "title": "Xem giờ trên đồng hồ",
-                        "contents": [
-                            {
-                                "id": 20,
-                                "text": "Học cách xem giờ trên đồng hồ kim và điện tử"
-                            },
-                            {
-                                "id": 21,
-                                "text": "Nhận biết các thời điểm trong ngày"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 10,
-                        "title": "Đo lường và đơn vị đo",
-                        "contents": [
-                            {
-                                "id": 22,
-                                "text": "Giới thiệu các đơn vị đo: cm, m, kg, l"
-                            },
-                            {
-                                "id": 23,
-                                "text": "Học cách đo độ dài, cân nặng, thể tích"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 11,
-                        "title": "Làm quen với tiền Việt Nam",
-                        "contents": [
-                            {
-                                "id": 24,
-                                "text": "Nhận biết các tờ tiền mệnh giá nhỏ"
-                            },
-                            {
-                                "id": 25,
-                                "text": "Tính tổng số tiền khi mua sắm đơn giản"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 12,
-                        "title": "Phép nhân và phép chia cơ bản (giới thiệu)",
-                        "contents": [
-                            {
-                                "id": 26,
-                                "text": "Làm quen với nhân và chia qua ví dụ thực tế"
-                            },
-                            {
-                                "id": 27,
-                                "text": "Chia bánh, nhóm đồ vật thành phần bằng nhau"
-                            }
-                        ]
                     }
                 ]
             },
             {
-                "id": 13,
+                "id": "sheet2",
                 "name": "Bảng cửu chương - Dấu cộng",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header4",
                         "title": "Bảng cửu chương 1",
                         "contents": [
-                            { "id": 1, "text": "1 + 1 = 2" },
-                            { "id": 2, "text": "1 + 2 = 3" },
-                            { "id": 3, "text": "2 + 2 = 4" },
-                            { "id": 4, "text": "3 + 3 = 6" }
+                            { "id": "content9", "text": "1 + 1 = 2" },
+                            { "id": "content10", "text": "1 + 2 = 3" },
+                            { "id": "content11", "text": "1 + 3 = 4" },
+                            { "id": "content12", "text": "1 + 4 = 5" },
+                            { "id": "content13", "text": "1 + 5 = 6" },
+                            { "id": "content14", "text": "1 + 6 = 7" },
+                            { "id": "content15", "text": "1 + 7 = 8" },
+                            { "id": "content16", "text": "1 + 8 = 9" },
+                            { "id": "content17", "text": "1 + 9 = 10" }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header5",
                         "title": "Bảng cửu chương 2",
                         "contents": [
-                            { "id": 5, "text": "2 + 2 = 4" },
-                            { "id": 6, "text": "3 + 3 = 6" },
-                            { "id": 7, "text": "4 + 4 = 8" },
-                            { "id": 8, "text": "5 + 5 = 10" }
+                            { "id": "content18", "text": "2 + 1 = 3" },
+                            { "id": "content19", "text": "2 + 2 = 4" },
+                            { "id": "content20", "text": "2 + 3 = 5" },
+                            { "id": "content21", "text": "2 + 4 = 6" },
+                            { "id": "content22", "text": "2 + 5 = 7" },
+                            { "id": "content23", "text": "2 + 6 = 8" },
+                            { "id": "content24", "text": "2 + 7 = 9" },
+                            { "id": "content25", "text": "2 + 8 = 10" },
+                            { "id": "content26", "text": "2 + 9 = 11" }
                         ]
                     }
                 ]
             },
             {
-                "id": 14,
-                "name": "Các loại góc độ",
+                "id": "sheet3",
+                "name": "Phép trừ",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header6",
+                        "title": "Phép trừ trong phạm vi 10",
+                        "contents": [
+                            {
+                                "id": "content27",
+                                "text": "Giới thiệu phép trừ và dấu trừ (-)"
+                            },
+                            {
+                                "id": "content28",
+                                "text": "Trừ hai số trong phạm vi 10"
+                            },
+                            {
+                                "id": "content29",
+                                "text": "Thực hành trừ số lớn với số bé"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "header7",
+                        "title": "Phép trừ trong phạm vi 20",
+                        "contents": [
+                            {
+                                "id": "content30",
+                                "text": "Mở rộng phép trừ với số lớn hơn 10"
+                            },
+                            {
+                                "id": "content31",
+                                "text": "Thực hành trừ có nhớ và không nhớ"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "header8",
+                        "title": "Phép trừ trong phạm vi 100",
+                        "contents": [
+                            {
+                                "id": "content32",
+                                "text": "Thực hành trừ hai số có hai chữ số"
+                            },
+                            {
+                                "id": "content33",
+                                "text": "Áp dụng quy tắc trừ trong tính toán"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "sheet4",
+                "name": "Phép nhân và phép chia",
+                "headers": [
+                    {
+                        "id": "header9",
+                        "title": "Bảng nhân 1",
+                        "contents": [
+                            { "id": "content34", "text": "1 x 1 = 1" },
+                            { "id": "content35", "text": "1 x 2 = 2" },
+                            { "id": "content36", "text": "1 x 3 = 3" },
+                            { "id": "content37", "text": "1 x 4 = 4" },
+                            { "id": "content38", "text": "1 x 5 = 5" },
+                            { "id": "content39", "text": "1 x 6 = 6" }
+                        ]
+                    },
+                    {
+                        "id": "header10",
+                        "title": "Bảng nhân 2",
+                        "contents": [
+                            { "id": "content40", "text": "2 x 1 = 2" },
+                            { "id": "content41", "text": "2 x 2 = 4" },
+                            { "id": "content42", "text": "2 x 3 = 6" },
+                            { "id": "content43", "text": "2 x 4 = 8" },
+                            { "id": "content44", "text": "2 x 5 = 10" }
+                        ]
+                    },
+                    {
+                        "id": "header11",
+                        "title": "Phép chia cơ bản",
+                        "contents": [
+                            {
+                                "id": "content45",
+                                "text": "Giới thiệu phép chia và dấu chia (/)"
+                            },
+                            {
+                                "id": "content46",
+                                "text": "Chia các số nhỏ trong phạm vi 10"
+                            },
+                            {
+                                "id": "content47",
+                                "text": "Thực hành chia bánh, chia nhóm đồ vật thành phần bằng nhau"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "sheet5",
+                "name": "Các loại hình học",
+                "headers": [
+                    {
+                        "id": "header12",
+                        "title": "Hình vuông",
+                        "contents": [
+                            {
+                                "id": "content48",
+                                "text": "Hình vuông có 4 cạnh đều và 4 góc vuông"
+                            },
+                            {
+                                "id": "content49",
+                                "text": "Cách tính diện tích và chu vi của hình vuông"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "header13",
+                        "title": "Hình tròn",
+                        "contents": [
+                            {
+                                "id": "content50",
+                                "text": "Hình tròn có một đường tròn bao quanh và bán kính là khoảng cách từ tâm đến viền"
+                            },
+                            {
+                                "id": "content51",
+                                "text": "Cách tính diện tích và chu vi của hình tròn"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "header14",
+                        "title": "Hình chữ nhật",
+                        "contents": [
+                            {
+                                "id": "content52",
+                                "text": "Hình chữ nhật có 2 cặp cạnh đối diện song song và bằng nhau"
+                            },
+                            {
+                                "id": "content53",
+                                "text": "Cách tính diện tích và chu vi của hình chữ nhật"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "sheet6",
+                "name": "Các loại góc",
+                "headers": [
+                    {
+                        "id": "header15",
                         "title": "Góc vuông",
                         "contents": [
                             {
-                                "id": 1,
-                                "text": "Góc vuông có độ lớn là 90 độ."
+                                "id": "content54",
+                                "text": "Góc vuông có độ lớn là 90 độ"
                             },
                             {
-                                "id": 2,
-                                "text": "Góc vuông là góc giữa hai đường thẳng vuông góc với nhau."
+                                "id": "content55",
+                                "text": "Góc vuông xuất hiện trong nhiều hình học cơ bản"
                             }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header16",
                         "title": "Góc nhọn",
                         "contents": [
                             {
-                                "id": 3,
-                                "text": "Góc nhọn có độ lớn nhỏ hơn 90 độ."
+                                "id": "content56",
+                                "text": "Góc nhọn có độ lớn nhỏ hơn 90 độ"
                             },
                             {
-                                "id": 4,
-                                "text": "Góc nhọn thường xuất hiện trong các hình học phức tạp."
+                                "id": "content57",
+                                "text": "Góc nhọn được tìm thấy trong các hình học phức tạp hơn"
                             }
                         ]
                     },
                     {
-                        "id": 3,
+                        "id": "header17",
                         "title": "Góc tù",
                         "contents": [
                             {
-                                "id": 5,
-                                "text": "Góc tù có độ lớn lớn hơn 90 độ."
+                                "id": "content58",
+                                "text": "Góc tù có độ lớn lớn hơn 90 độ"
                             },
                             {
-                                "id": 6,
-                                "text": "Góc tù thường gặp trong các hình tam giác không vuông."
+                                "id": "content59",
+                                "text": "Góc tù thường gặp trong các hình tam giác không vuông"
                             }
                         ]
                     }
                 ]
             },
             {
-                "id": 15,
+                "id": "sheet7",
                 "name": "Hằng đẳng thức đáng nhớ",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header18",
                         "title": "(a + b)^2 = a^2 + 2ab + b^2",
                         "contents": [
                             {
-                                "id": 1,
-                                "text": "Hằng đẳng thức này được sử dụng trong việc bình phương một tổng."
+                                "id": "content60",
+                                "text": "Hằng đẳng thức này được sử dụng khi bình phương một tổng"
                             }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header19",
                         "title": "(a - b)^2 = a^2 - 2ab + b^2",
                         "contents": [
                             {
-                                "id": 2,
-                                "text": "Hằng đẳng thức này áp dụng khi bình phương một hiệu."
+                                "id": "content61",
+                                "text": "Hằng đẳng thức này áp dụng khi bình phương một hiệu"
                             }
                         ]
                     },
                     {
-                        "id": 3,
+                        "id": "header20",
                         "title": "a^2 - b^2 = (a + b)(a - b)",
                         "contents": [
                             {
-                                "id": 3,
-                                "text": "Hằng đẳng thức này là một công thức khai triển khác của phép trừ bình phương."
+                                "id": "content62",
+                                "text": "Hằng đẳng thức này là công thức khai triển của phép trừ bình phương"
                             }
                         ]
                     }
@@ -287,359 +329,120 @@
         ]
     },
     {
-        "id": 2,
+        "id": "lop2",
         "title": "Lớp 2",
         "cheatsheets": [
             {
-                "id": 1,
+                "id": "sheet1",
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header1",
                         "title": "Số đếm và số thứ tự",
                         "contents": [
                             {
-                                "id": 1,
+                                "id": "content1",
                                 "text": "Học cách đếm số từ 1 đến 1000, đọc và viết số"
                             },
                             {
-                                "id": 2,
+                                "id": "content2",
                                 "text": "Nhận diện số chẵn, số lẻ, số tròn chục, số tròn trăm"
                             },
                             {
-                                "id": 3,
+                                "id": "content3",
                                 "text": "Thực hành số thứ tự trong dãy số"
                             }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header2",
                         "title": "So sánh và sắp xếp số trong phạm vi 1000",
                         "contents": [
                             {
-                                "id": 4,
+                                "id": "content4",
                                 "text": "So sánh số lớn hơn, số bé hơn, số bằng nhau"
                             },
                             {
-                                "id": 5,
+                                "id": "content5",
                                 "text": "Sắp xếp các số theo thứ tự tăng dần, giảm dần"
                             }
                         ]
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "lop3",
+        "title": "Lớp 3",
+        "cheatsheets": [
+            {
+                "id": "sheet1",
+                "name": "Toán - Số học cơ bản",
+                "headers": [
                     {
-                        "id": 3,
-                        "title": "Phép cộng và phép trừ trong phạm vi 1000",
+                        "id": "header1",
+                        "title": "Số tự nhiên và số thứ tự",
                         "contents": [
                             {
-                                "id": 6,
-                                "text": "Cộng, trừ không nhớ và có nhớ trong phạm vi 1000"
+                                "id": "content1",
+                                "text": "Mở rộng phạm vi số đến 10.000"
                             },
                             {
-                                "id": 7,
-                                "text": "Áp dụng quy tắc tính toán đúng cách qua bài tập"
+                                "id": "content2",
+                                "text": "Đọc, viết, so sánh và sắp xếp số theo thứ tự"
+                            },
+                            {
+                                "id": "content3",
+                                "text": "Nhận diện số chẵn, số lẻ, số tròn chục, tròn trăm, tròn nghìn"
                             }
                         ]
                     },
                     {
-                        "id": 4,
-                        "title": "Bảng nhân và bảng chia",
+                        "id": "header2",
+                        "title": "Phép cộng, trừ, nhân, chia số tự nhiên",
                         "contents": [
                             {
-                                "id": 8,
-                                "text": "Học thuộc bảng nhân từ 1 đến 5"
+                                "id": "content4",
+                                "text": "Thực hành cộng, trừ, nhân, chia số có nhiều chữ số"
                             },
                             {
-                                "id": 9,
-                                "text": "Làm quen với bảng nhân 6, 7, 8, 9"
-                            },
-                            {
-                                "id": 10,
-                                "text": "Giới thiệu phép chia và mối quan hệ giữa nhân và chia"
+                                "id": "content5",
+                                "text": "Vận dụng quy tắc tính toán và thứ tự thực hiện phép tính trong biểu thức"
                             }
                         ]
                     },
                     {
-                        "id": 5,
-                        "title": "Phép nhân và phép chia trong phạm vi 100",
+                        "id": "header3",
+                        "title": "Nhân, chia số có ba chữ số cho số có một chữ số",
                         "contents": [
                             {
-                                "id": 11,
-                                "text": "Nhân và chia số có một chữ số với số có hai chữ số"
-                            },
-                            { "id": 12, "text": "Áp dụng vào bài toán thực tế" }
-                        ]
-                    },
-                    {
-                        "id": 6,
-                        "title": "Giải toán có lời văn",
-                        "contents": [
-                            {
-                                "id": 13,
-                                "text": "Đọc hiểu bài toán có lời văn"
+                                "id": "content6",
+                                "text": "Thực hiện phép nhân, chia số có ba chữ số cho số có một chữ số"
                             },
                             {
-                                "id": 14,
-                                "text": "Xác định phép toán thích hợp để giải toán cộng, trừ, nhân, chia"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 7,
-                        "title": "Hình học cơ bản",
-                        "contents": [
-                            {
-                                "id": 15,
-                                "text": "Nhận biết và mô tả các hình vuông, tròn, tam giác, chữ nhật"
-                            },
-                            {
-                                "id": 16,
-                                "text": "Học cách vẽ các hình đơn giản"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 8,
-                        "title": "Xem giờ trên đồng hồ",
-                        "contents": [
-                            {
-                                "id": 17,
-                                "text": "Luyện tập xem giờ chính xác đến từng phút trên đồng hồ kim và điện tử"
-                            },
-                            {
-                                "id": 18,
-                                "text": "Nhận biết các khoảng thời gian trong ngày"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 9,
-                        "title": "Đơn vị đo lường",
-                        "contents": [
-                            {
-                                "id": 19,
-                                "text": "Học về các đơn vị đo độ dài (cm, m, km), đo khối lượng (g, kg), đo dung tích (ml, l)"
-                            },
-                            {
-                                "id": 20,
-                                "text": "Thực hành đo lường trong thực tế"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 10,
-                        "title": "Làm quen với tiền Việt Nam",
-                        "contents": [
-                            {
-                                "id": 21,
-                                "text": "Nhận biết các tờ tiền có mệnh giá lớn hơn (10.000đ, 20.000đ, 50.000đ...)"
-                            },
-                            {
-                                "id": 22,
-                                "text": "Học cách cộng, trừ tiền trong giao dịch mua bán đơn giản"
+                                "id": "content7",
+                                "text": "Áp dụng vào giải bài toán thực tế"
                             }
                         ]
                     }
                 ]
             },
             {
-                "id": 2,
-                "name": "Tiếng Việt - Ngữ pháp và Chính tả",
+                "id": "sheet2",
+                "name": "Giải bài toán có lời văn",
                 "headers": [
                     {
-                        "id": 1,
-                        "title": "Vần và âm tiết",
+                        "id": "header4",
+                        "title": "Giải toán có lời văn",
                         "contents": [
                             {
-                                "id": 1,
-                                "text": "Nhận diện vần và âm tiết trong từ"
-                            },
-                            {
-                                "id": 2,
-                                "text": "Phân biệt nguyên âm đơn, nguyên âm đôi, phụ âm đầu và phụ âm cuối"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "title": "Chính tả",
-                        "contents": [
-                            {
-                                "id": 3,
-                                "text": "Phân biệt các âm dễ nhầm như s/x, ch/tr, r/d/gi"
-                            },
-                            {
-                                "id": 4,
-                                "text": "Luyện viết đúng chính tả qua bài tập"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 3,
-                        "title": "Câu đơn và câu ghép",
-                        "contents": [
-                            {
-                                "id": 5,
-                                "text": "Nhận biết câu đơn và câu ghép"
-                            },
-                            {
-                                "id": 6,
-                                "text": "Thực hành viết câu đơn và câu ghép"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 4,
-                        "title": "Từ loại",
-                        "contents": [
-                            {
-                                "id": 7,
-                                "text": "Phân biệt danh từ, động từ, tính từ"
-                            },
-                            {
-                                "id": 8,
-                                "text": "Sử dụng đúng từ loại trong câu"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 5,
-                        "title": "Viết đoạn văn ngắn",
-                        "contents": [
-                            {
-                                "id": 9,
-                                "text": "Luyện tập viết đoạn văn ngắn về chủ đề gia đình, bạn bè, trường lớp"
-                            },
-                            {
-                                "id": 10,
-                                "text": "Sử dụng dấu câu đúng cách"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "title": "Lớp 3",
-        "cheatsheets": [
-            {
-                "id": 1,
-                "name": "Toán - Số học cơ bản",
-                "headers": [
-                    {
-                        "id": 1,
-                        "title": "Số tự nhiên và số thứ tự",
-                        "contents": [
-                            {
-                                "id": 1,
-                                "text": "Mở rộng phạm vi số đến 10.000"
-                            },
-                            {
-                                "id": 2,
-                                "text": "Đọc, viết, so sánh và sắp xếp số theo thứ tự"
-                            },
-                            {
-                                "id": 3,
-                                "text": "Nhận diện số chẵn, số lẻ, số tròn chục, tròn trăm, tròn nghìn"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "title": "Phép cộng, trừ, nhân, chia số tự nhiên",
-                        "contents": [
-                            {
-                                "id": 4,
-                                "text": "Thực hành cộng, trừ, nhân, chia số có nhiều chữ số"
-                            },
-                            {
-                                "id": 5,
-                                "text": "Vận dụng quy tắc tính toán và thứ tự thực hiện phép tính trong biểu thức"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 3,
-                        "title": "Nhân, chia số có ba chữ số cho số có một chữ số",
-                        "contents": [
-                            {
-                                "id": 6,
-                                "text": "Thực hiện phép nhân, chia số có ba chữ số cho số có một chữ số"
-                            },
-                            {
-                                "id": 7,
-                                "text": "Áp dụng vào giải bài toán thực tế"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 4,
-                        "title": "Giải bài toán có lời văn",
-                        "contents": [
-                            {
-                                "id": 8,
+                                "id": "content8",
                                 "text": "Rèn luyện kỹ năng đọc, phân tích bài toán có lời văn"
                             },
                             {
-                                "id": 9,
+                                "id": "content9",
                                 "text": "Xác định dữ kiện và phép tính phù hợp"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 5,
-                        "title": "Hình học cơ bản",
-                        "contents": [
-                            {
-                                "id": 10,
-                                "text": "Nhận biết các hình: hình vuông, hình chữ nhật, hình tam giác, hình tròn"
-                            },
-                            {
-                                "id": 11,
-                                "text": "Học cách tính chu vi và diện tích của hình vuông, hình chữ nhật"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 6,
-                        "title": "Xem giờ và tính thời gian",
-                        "contents": [
-                            {
-                                "id": 12,
-                                "text": "Luyện tập xem giờ chính xác trên đồng hồ kim và điện tử"
-                            },
-                            {
-                                "id": 13,
-                                "text": "Tính khoảng thời gian giữa hai mốc thời gian trong ngày"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 7,
-                        "title": "Đơn vị đo lường",
-                        "contents": [
-                            {
-                                "id": 14,
-                                "text": "Mở rộng về đơn vị đo độ dài (mm, cm, m, km), đơn vị đo khối lượng (g, kg, tấn), đơn vị đo dung tích (ml, l)"
-                            },
-                            {
-                                "id": 15,
-                                "text": "Thực hành quy đổi giữa các đơn vị đo"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 8,
-                        "title": "Làm quen với tiền Việt Nam",
-                        "contents": [
-                            {
-                                "id": 16,
-                                "text": "Nhận biết các mệnh giá tiền từ 1.000đ đến 500.000đ"
-                            },
-                            {
-                                "id": 17,
-                                "text": "Thực hành tính toán tiền trong các tình huống mua bán đơn giản"
                             }
                         ]
                     }
@@ -648,126 +451,76 @@
         ]
     },
     {
-        "id": 4,
+        "id": "lop4",
         "title": "Lớp 4",
         "cheatsheets": [
             {
-                "id": 1,
+                "id": "sheet1",
                 "name": "Toán - Số học nâng cao",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header1",
                         "title": "Số tự nhiên và phân số",
                         "contents": [
                             {
-                                "id": 1,
+                                "id": "content1",
                                 "text": "Mở rộng phạm vi số đến 100.000"
                             },
                             {
-                                "id": 2,
+                                "id": "content2",
                                 "text": "Đọc, viết, so sánh và sắp xếp số theo thứ tự"
                             },
                             {
-                                "id": 3,
+                                "id": "content3",
                                 "text": "Giới thiệu khái niệm phân số và cách đọc, viết phân số"
                             }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header2",
                         "title": "Phép cộng, trừ, nhân, chia số tự nhiên",
                         "contents": [
                             {
-                                "id": 4,
+                                "id": "content4",
                                 "text": "Thực hành cộng, trừ, nhân, chia số có nhiều chữ số"
                             },
                             {
-                                "id": 5,
+                                "id": "content5",
                                 "text": "Tìm hiểu về quy tắc nhân, chia một số với 10, 100, 1.000"
                             }
                         ]
                     },
                     {
-                        "id": 3,
+                        "id": "header3",
                         "title": "Phép nhân và chia phân số",
                         "contents": [
                             {
-                                "id": 6,
+                                "id": "content6",
                                 "text": "Học cách thực hiện phép nhân và chia hai phân số"
                             },
                             {
-                                "id": 7,
+                                "id": "content7",
                                 "text": "Áp dụng quy tắc nghịch đảo khi chia phân số"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "id": "sheet2",
+                "name": "Giải bài toán có lời văn",
+                "headers": [
                     {
-                        "id": 4,
+                        "id": "header4",
                         "title": "Giải bài toán có lời văn",
                         "contents": [
                             {
-                                "id": 8,
+                                "id": "content8",
                                 "text": "Luyện tập cách phân tích bài toán và xác định phép tính thích hợp"
                             },
                             {
-                                "id": 9,
+                                "id": "content9",
                                 "text": "Thực hành với các bài toán liên quan đến tỉ số, tổng - hiệu"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 5,
-                        "title": "Hình học cơ bản",
-                        "contents": [
-                            {
-                                "id": 10,
-                                "text": "Nhận biết và tính chu vi, diện tích các hình vuông, hình chữ nhật, hình tam giác"
-                            },
-                            {
-                                "id": 11,
-                                "text": "Giới thiệu khái niệm đường kính, bán kính của hình tròn"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 6,
-                        "title": "Xem giờ và tính thời gian",
-                        "contents": [
-                            {
-                                "id": 12,
-                                "text": "Luyện tập xem giờ chính xác đến giây"
-                            },
-                            {
-                                "id": 13,
-                                "text": "Tính khoảng thời gian giữa hai mốc thời gian trong ngày"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 7,
-                        "title": "Đơn vị đo lường",
-                        "contents": [
-                            {
-                                "id": 14,
-                                "text": "Học cách quy đổi giữa các đơn vị đo độ dài, khối lượng và dung tích"
-                            },
-                            {
-                                "id": 15,
-                                "text": "Thực hành chuyển đổi các đơn vị đo trong các bài toán thực tế"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 8,
-                        "title": "Làm quen với tiền Việt Nam",
-                        "contents": [
-                            {
-                                "id": 16,
-                                "text": "Nhận biết các mệnh giá tiền và cách tính tiền trong mua bán"
-                            },
-                            {
-                                "id": 17,
-                                "text": "Học cách quy đổi tiền và tính toán tiền thừa"
                             }
                         ]
                     }
@@ -776,105 +529,99 @@
         ]
     },
     {
-        "id": 5,
+        "id": "lop5",
         "title": "Lớp 5",
         "cheatsheets": [
             {
-                "id": 1,
+                "id": "sheet1",
                 "name": "Toán - Số học nâng cao",
                 "headers": [
                     {
-                        "id": 1,
+                        "id": "header1",
                         "title": "Số thập phân và phân số",
                         "contents": [
                             {
-                                "id": 1,
+                                "id": "content1",
                                 "text": "Học cách đọc, viết, so sánh và quy đổi giữa số thập phân và phân số"
                             },
                             {
-                                "id": 2,
+                                "id": "content2",
                                 "text": "Thực hành tính toán với số thập phân"
                             }
                         ]
                     },
                     {
-                        "id": 2,
+                        "id": "header2",
                         "title": "Phép cộng, trừ, nhân, chia số thập phân",
                         "contents": [
                             {
-                                "id": 3,
+                                "id": "content3",
                                 "text": "Thực hành các phép tính cộng, trừ, nhân, chia với số thập phân"
                             },
                             {
-                                "id": 4,
+                                "id": "content4",
                                 "text": "Áp dụng quy tắc làm tròn và tính nhẩm số thập phân"
                             }
                         ]
                     },
                     {
-                        "id": 3,
+                        "id": "header3",
                         "title": "Tỉ lệ và tỉ số",
                         "contents": [
                             {
-                                "id": 5,
+                                "id": "content5",
                                 "text": "Giới thiệu khái niệm tỉ số, tỉ lệ phần trăm và cách tính toán trong các bài toán thực tế"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "id": "sheet2",
+                "name": "Giải bài toán có lời văn nâng cao",
+                "headers": [
                     {
-                        "id": 4,
+                        "id": "header4",
                         "title": "Giải bài toán có lời văn nâng cao",
                         "contents": [
                             {
-                                "id": 6,
+                                "id": "content6",
                                 "text": "Luyện tập giải các bài toán có lời văn phức tạp hơn liên quan đến nhiều phép tính kết hợp"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "id": "sheet3",
+                "name": "Hình học mở rộng",
+                "headers": [
                     {
-                        "id": 5,
+                        "id": "header5",
                         "title": "Hình học mở rộng",
                         "contents": [
                             {
-                                "id": 7,
+                                "id": "content7",
                                 "text": "Học cách tính diện tích và chu vi của các hình phức tạp như hình thang, hình bình hành, hình tròn"
                             },
                             {
-                                "id": 8,
+                                "id": "content8",
                                 "text": "Giới thiệu khái niệm thể tích của hình hộp chữ nhật"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "id": "sheet4",
+                "name": "Quản lý tài chính cá nhân cơ bản",
+                "headers": [
                     {
-                        "id": 6,
-                        "title": "Xem giờ và tính toán thời gian nâng cao",
-                        "contents": [
-                            {
-                                "id": 9,
-                                "text": "Thực hành tính thời gian với các đơn vị giờ, phút, giây và chuyển đổi giữa chúng"
-                            },
-                            {
-                                "id": 10,
-                                "text": "Ứng dụng vào các bài toán thực tế về lịch trình"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 7,
-                        "title": "Đơn vị đo lường và quy đổi",
-                        "contents": [
-                            {
-                                "id": 11,
-                                "text": "Học cách quy đổi linh hoạt giữa các đơn vị đo độ dài, khối lượng, dung tích trong các bài toán thực tế"
-                            }
-                        ]
-                    },
-                    {
-                        "id": 8,
+                        "id": "header6",
                         "title": "Quản lý tài chính cá nhân cơ bản",
                         "contents": [
                             {
-                                "id": 12,
+                                "id": "content9",
                                 "text": "Học cách tính toán chi tiêu, tiết kiệm và hiểu giá trị của tiền tệ trong cuộc sống hàng ngày"
                             }
                         ]
