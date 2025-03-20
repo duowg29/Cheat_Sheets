@@ -15,20 +15,28 @@ export default class DataService {
                             new CheatsheetDTO(
                                 ch.id,
                                 ch.name,
-                                ch.headers.map(
-                                    (hd: any) =>
-                                        new HeaderDTO(
-                                            hd.id,
-                                            hd.title,
-                                            hd.contents.map(
-                                                (ct: any) =>
-                                                    new ContentDTO(
-                                                        ct.id,
-                                                        ct.text
-                                                    )
-                                            )
-                                        )
-                                )
+                                ch.headers.map((hd: any) => {
+                                    const image = hd.image
+                                        ? {
+                                              path: hd.image.path,
+                                              x: hd.image.x,
+                                              y: hd.image.y,
+                                              width: hd.image.width,
+                                              height: hd.image.height,
+                                              rotation: hd.image.rotation,
+                                          }
+                                        : null;
+
+                                    return new HeaderDTO(
+                                        hd.id,
+                                        hd.title,
+                                        hd.contents.map(
+                                            (ct: any) =>
+                                                new ContentDTO(ct.id, ct.text)
+                                        ),
+                                        image
+                                    );
+                                })
                             )
                     )
                 )

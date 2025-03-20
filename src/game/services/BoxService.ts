@@ -18,7 +18,8 @@ export default class BoxService {
             .rectangle(0, 0, boxWidth, boxHeight, 0xffffff)
             .setStrokeStyle(4, 0x000000)
             .setOrigin(0.5)
-            .setSize(boxWidth, boxHeight);
+            .setSize(boxWidth, boxHeight)
+            .setInteractive();
 
         const titleText = scene.add
             .text(0, -boxHeight / 2 + padding, title, {

@@ -31,7 +31,7 @@ export default class CardService {
                     useAdvancedWrap: true,
                 },
             })
-            .setOrigin(0.5); // Căn giữa cả chiều ngang và dọc
+            .setOrigin(0.5);
 
         card.add([background, headerText]);
 

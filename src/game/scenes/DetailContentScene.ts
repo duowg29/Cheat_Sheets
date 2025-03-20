@@ -65,6 +65,22 @@ export default class DetailContentScene extends Phaser.Scene {
             )
             .setOrigin(0.5);
 
+        if (header.image) {
+            const { path, x, y, width, height, rotation } = header.image;
+
+            this.load.image(path, path);
+
+            this.load.once("complete", () => {
+                this.add
+                    .image(x, y, path)
+                    .setOrigin(0.5)
+                    .setDisplaySize(width, height)
+                    .setRotation(Phaser.Math.DegToRad(rotation));
+            });
+
+            this.load.start();
+        }
+
         this.backButton = this.add
             .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
                 fontFamily: "Arial",

@@ -258,7 +258,15 @@
                                 "id": "content55",
                                 "text": "Góc vuông xuất hiện trong nhiều hình học cơ bản"
                             }
-                        ]
+                        ],
+                        "image": {
+                            "path": "assets/images/angle/types.png",
+                            "x": 0.5,
+                            "y": 0.5,
+                            "width": 200,
+                            "height": 200,
+                            "rotation": 45
+                        }
                     },
                     {
                         "id": "header16",
