@@ -3,6 +3,8 @@ import DataService from "../services/DataService";
 import UIService from "../services/UIService";
 import NavigationService from "../services/NavigationService";
 import CardService from "../services/CardService";
+import CardDTO from "../dto/CardDTO";
+import MenuContentScene from "./MenuContentScene";
 
 export default class GamePlayScene extends Phaser.Scene {
     private classes: ClassDTO[] = [];
@@ -82,6 +84,17 @@ export default class GamePlayScene extends Phaser.Scene {
         this.upButton.on("pointerdown", () => this.scrollPage(-1));
         this.downButton.on("pointerdown", () => this.scrollPage(1));
 
+        this.events.on("card-selected", (cardDTO: CardDTO) => {
+            console.log("Card selected:", cardDTO.header);
+            this.currentCheatsheetIndex = this.scrollIndex + cardDTO.id;
+            this.scene.start("MenuContentScene", {
+                cheatsheet:
+                    this.classes[this.currentClassIndex].cheatsheets[
+                        this.currentCheatsheetIndex
+                    ],
+            });
+        });
+
         this.updatePage();
     }
 
@@ -116,30 +129,39 @@ export default class GamePlayScene extends Phaser.Scene {
             this.classes[this.currentClassIndex].cheatsheets[
                 this.currentCheatsheetIndex
             ];
+
         this.cheatsheetNameText.setText(currentCheatsheet.name);
 
         this.cards.forEach((card) => card.destroy());
         this.cards = [];
 
-        const headersToShow = currentCheatsheet.headers.slice(
+        const cheatsheetsToShow = this.classes[
+            this.currentClassIndex
+        ].cheatsheets.slice(
             this.scrollIndex,
             this.scrollIndex + this.maxCardsPerPage
         );
 
-        headersToShow.forEach((header, index) => {
+        cheatsheetsToShow.forEach((cheatsheet, index) => {
+            const cardId = `card${this.scrollIndex + index + 1}`;
+
+            const cardDTO = new CardDTO(cheatsheet.id, cheatsheet.name, cardId);
+
             const row = Math.floor(index / 2);
             const col = index % 2;
 
             const cardX = this.scale.width * (0.3 + col * 0.4);
             const cardY = this.scale.height * (0.3 + row * 0.2);
 
-            const card = CardService.createCard(
-                this,
-                cardX,
-                cardY,
-                header.title,
-                header.contents.map((c) => c.text).join("\n")
-            );
+            const card = CardService.createCard(this, cardX, cardY, cardDTO);
+
+            card.setInteractive().on("pointerup", () => {
+                console.log(
+                    `Card selected: ${cardDTO.header} (ID: ${cardDTO.id})`
+                );
+                this.events.emit("card-selected", cardDTO);
+            });
+
             this.cards.push(card);
         });
     }

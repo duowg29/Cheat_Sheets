@@ -1,12 +1,12 @@
 import Phaser from "phaser";
+import CardDTO from "../dto/CardDTO";
 
 export default class CardService {
     static createCard(
         scene: Phaser.Scene,
         x: number,
         y: number,
-        header: string,
-        text: string
+        cardDTO: CardDTO // Nhận CardDTO thay vì các tham số riêng biệt
     ): Phaser.GameObjects.Container {
         const cardWidth = scene.scale.width * 0.3;
         const cardHeight = scene.scale.height * 0.2;
@@ -20,7 +20,7 @@ export default class CardService {
             .setOrigin(0.5);
 
         const headerText = scene.add
-            .text(0, -cardHeight / 2 + padding, header, {
+            .text(0, -cardHeight / 2 + padding, cardDTO.header, {
                 fontFamily: "Arial",
                 fontSize: `${scene.scale.width * 0.015}px`,
                 fontStyle: "bold",
@@ -33,23 +33,18 @@ export default class CardService {
             })
             .setOrigin(0.5, 0);
 
-        const contentText = scene.add.text(
-            -cardWidth / 2 + padding,
-            -cardHeight / 2 + 90,
-            text,
-            {
-                fontFamily: "Arial",
-                fontSize: `${scene.scale.width * 0.012}px`,
-                color: "#222",
-                wordWrap: {
-                    width: cardWidth - padding * 2,
-                    useAdvancedWrap: true,
-                },
-                align: "left",
-            }
-        );
+        // Không cần contentText nữa vì chỉ hiển thị header
+        card.add([background, headerText]);
 
-        card.add([background, headerText, contentText]);
+        // Đặt kích thước cho container trước khi thiết lập tính tương tác
+        card.setSize(cardWidth, cardHeight);
+
+        // Thiết lập card là interactive và phát sự kiện khi chọn thẻ
+        card.setInteractive().on("pointerup", () => {
+            console.log("Card selected:", cardDTO.header);
+            scene.events.emit("card-selected", cardDTO); // Phát sự kiện chọn card
+        });
+
         return card;
     }
 }
