@@ -5,6 +5,7 @@ export default class DetailContentScene extends Phaser.Scene {
     private headerTitleText!: Phaser.GameObjects.Text;
     private contentText!: Phaser.GameObjects.Text;
     private background!: Phaser.GameObjects.Rectangle;
+    private container!: Phaser.GameObjects.Container; // Define the container for content
 
     constructor() {
         super({ key: "DetailContentScene" });
@@ -24,15 +25,27 @@ export default class DetailContentScene extends Phaser.Scene {
             return;
         }
 
+        this.container = this.add.container(
+            this.scale.width * 0.5,
+            this.scale.height * 0.5
+        );
+
         this.background = this.add
-            .rectangle(0, 0, this.scale.width, this.scale.height, 0xffffff)
-            .setOrigin(0)
-            .setDepth(-1);
+            .rectangle(
+                0,
+                0,
+                this.scale.width * 0.5,
+                this.scale.height * 0.7,
+                0xffffff
+            )
+            .setOrigin(0.5)
+            .setStrokeStyle(4, 0x000000);
+        this.container.add(this.background);
 
         this.headerTitleText = this.add
             .text(
                 this.scale.width * 0.5,
-                this.scale.height * 0.1,
+                this.scale.height * 0.07,
                 header.title,
                 {
                     fontFamily: "Arial",
@@ -49,28 +62,22 @@ export default class DetailContentScene extends Phaser.Scene {
             .join("\n\n");
 
         this.contentText = this.add
-            .text(
-                this.scale.width * 0.5,
-                this.scale.height * 0.5,
-                contentString,
-                {
-                    fontFamily: "Arial",
-                    fontSize: `${this.scale.width * 0.015}px`,
-                    color: "#555",
-                    align: "center",
-                    wordWrap: {
-                        width: this.scale.width * 0.8,
-                        useAdvancedWrap: true,
-                    },
-                }
-            )
+            .text(0, 0, contentString, {
+                fontFamily: "Arial",
+                fontSize: `${this.scale.width * 0.02}px`,
+                color: "#555",
+                align: "center",
+                wordWrap: {
+                    width: this.scale.width * 0.7,
+                    useAdvancedWrap: true,
+                },
+            })
             .setOrigin(0.5);
+        this.container.add(this.contentText);
 
         if (header.image) {
             const { path, x, y, width, height, rotation } = header.image;
-
             this.load.image(path, path);
-
             this.load.once("complete", () => {
                 this.add
                     .image(x, y, path)
@@ -78,7 +85,6 @@ export default class DetailContentScene extends Phaser.Scene {
                     .setDisplaySize(width, height)
                     .setRotation(Phaser.Math.DegToRad(rotation));
             });
-
             this.load.start();
         }
 
