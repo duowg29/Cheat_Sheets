@@ -59,11 +59,11 @@ export default class BoxService {
         box.setSize(boxWidth, boxHeight);
         box.setInteractive();
         box.on("pointerover", () => {
-            box.setScale(1.1); // Enlarge the box when hovered
+            box.setScale(1.1);
         });
 
         box.on("pointerout", () => {
-            box.setScale(1); // Reset scale when hover ends
+            box.setScale(1);
         });
         box.on("pointerup", () => {
             console.log(`Box selected: ${title}`);

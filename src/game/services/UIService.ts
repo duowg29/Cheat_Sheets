@@ -28,11 +28,11 @@ export default class UIService {
                 .setInteractive()
                 .setOrigin(0.5);
             button.on("pointerover", () => {
-                button.setScale(1.1); // Enlarge the button when hovered
+                button.setScale(1.1);
             });
 
             button.on("pointerout", () => {
-                button.setScale(1); // Reset scale when hover ends
+                button.setScale(1);
             });
             button.on("pointerdown", () => callback(index));
             buttons.push(button);

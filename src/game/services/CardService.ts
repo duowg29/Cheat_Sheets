@@ -42,11 +42,11 @@ export default class CardService {
             scene.events.emit("card-selected", cardDTO);
         });
         card.on("pointerover", () => {
-            card.setScale(1.1); // Enlarge the card when hovered
+            card.setScale(1.1);
         });
 
         card.on("pointerout", () => {
-            card.setScale(1); // Reset scale when hover ends
+            card.setScale(1);
         });
 
         return card;
