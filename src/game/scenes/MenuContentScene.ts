@@ -5,6 +5,7 @@ import ContentDTO from "../dto/ContentDTO";
 export default class MenuContentScene extends Phaser.Scene {
     private cheatsheet: any;
     private currentHeaderIndex: number = 0;
+
     private boxes: Phaser.GameObjects.Container[] = [];
     private maxBoxesPerPage: number = 6;
     private scrollIndex: number = 0;
@@ -103,7 +104,7 @@ export default class MenuContentScene extends Phaser.Scene {
         this.downButton.on("pointerdown", () => this.scrollPage(1));
 
         const backButton = this.add
-            .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
+            .text(this.scale.width * 0.03, this.scale.height * 0.03, "Back", {
                 fontFamily: "Arial",
                 fontSize: `${this.scale.width * 0.03}px`,
                 color: "#FFF",
@@ -112,6 +113,12 @@ export default class MenuContentScene extends Phaser.Scene {
             })
             .setInteractive()
             .setOrigin(0);
+        backButton.on("pointerover", () => {
+            backButton.setScale(1.1);
+        });
+        backButton.on("pointerout", () => {
+            backButton.setScale(1);
+        });
 
         backButton.on("pointerup", () => {
             this.scene.stop("MenuContentScene");

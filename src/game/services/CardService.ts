@@ -41,6 +41,13 @@ export default class CardService {
             console.log("Card selected:", cardDTO.header);
             scene.events.emit("card-selected", cardDTO);
         });
+        card.on("pointerover", () => {
+            card.setScale(1.1); // Enlarge the card when hovered
+        });
+
+        card.on("pointerout", () => {
+            card.setScale(1); // Reset scale when hover ends
+        });
 
         return card;
     }

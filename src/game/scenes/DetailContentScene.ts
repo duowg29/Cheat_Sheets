@@ -4,7 +4,6 @@ import ContentDTO from "../dto/ContentDTO";
 export default class DetailContentScene extends Phaser.Scene {
     private headerTitleText!: Phaser.GameObjects.Text;
     private contentText!: Phaser.GameObjects.Text;
-    private backButton!: Phaser.GameObjects.Text;
     private background!: Phaser.GameObjects.Rectangle;
 
     constructor() {
@@ -16,6 +15,8 @@ export default class DetailContentScene extends Phaser.Scene {
         console.log("Received header:", header);
         this.createContent(header);
     }
+
+    preload(): void {}
 
     createContent(header: any): void {
         if (!header || !header.contents) {
@@ -81,20 +82,25 @@ export default class DetailContentScene extends Phaser.Scene {
             this.load.start();
         }
 
-        this.backButton = this.add
-            .text(this.scale.width * 0.05, this.scale.height * 0.05, "Back", {
+        const backButton = this.add
+            .text(this.scale.width * 0.03, this.scale.height * 0.03, "Back", {
                 fontFamily: "Arial",
-                fontSize: `${this.scale.width * 0.04}px`,
+                fontSize: `${this.scale.width * 0.03}px`,
                 color: "#FFF",
-                backgroundColor: "#4CAF50",
-                padding: { left: 15, right: 15, top: 10, bottom: 10 },
-                stroke: "#000",
-                strokeThickness: 3,
+                backgroundColor: "#000",
+                padding: { left: 10, right: 10, top: 5, bottom: 5 },
             })
             .setInteractive()
             .setOrigin(0);
 
-        this.backButton.on("pointerup", () => {
+        backButton.on("pointerover", () => {
+            backButton.setScale(1.1);
+        });
+        backButton.on("pointerout", () => {
+            backButton.setScale(1);
+        });
+
+        backButton.on("pointerup", () => {
             this.scene.stop("DetailContentScene");
             this.scene.start("GamePlayScene");
         });

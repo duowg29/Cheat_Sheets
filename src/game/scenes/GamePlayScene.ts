@@ -96,13 +96,14 @@ export default class GamePlayScene extends Phaser.Scene {
             if (selectedCheatsheet) {
                 this.scene.start("MenuContentScene", {
                     cheatsheet: selectedCheatsheet,
+                    currentClassIndex: this.currentClassIndex,
+                    classes: this.classes,
                 });
             }
         });
 
         this.updatePage();
     }
-
     private changeCheatsheet(direction: number): void {
         this.currentCheatsheetIndex = Phaser.Math.Wrap(
             this.currentCheatsheetIndex + direction,
@@ -114,42 +115,39 @@ export default class GamePlayScene extends Phaser.Scene {
     }
 
     private scrollPage(direction: number): void {
-        const currentCheatsheet =
-            this.classes[this.currentClassIndex].cheatsheets[
-                this.currentCheatsheetIndex
-            ];
-        const totalHeaders = currentCheatsheet.headers.length;
+        const currentClass = this.classes[this.currentClassIndex];
+        const totalCheatsheets = currentClass.cheatsheets.length;
 
         this.scrollIndex = Phaser.Math.Clamp(
             this.scrollIndex + direction * this.maxCardsPerPage,
             0,
-            Math.max(0, totalHeaders - this.maxCardsPerPage)
+            Math.max(0, totalCheatsheets - this.maxCardsPerPage)
         );
 
         this.updatePage();
     }
 
     private updatePage(): void {
-        const currentCheatsheet =
-            this.classes[this.currentClassIndex].cheatsheets[
-                this.currentCheatsheetIndex
-            ];
+        const currentClass = this.classes[this.currentClassIndex];
+        const cheatsheets = currentClass.cheatsheets;
 
-        this.cheatsheetNameText.setText(currentCheatsheet.name);
+        this.cheatsheetNameText.setText(
+            cheatsheets[this.currentCheatsheetIndex].name
+        );
 
         this.cards.forEach((card) => card.destroy());
         this.cards = [];
 
-        const cheatsheetsToShow = this.classes[
-            this.currentClassIndex
-        ].cheatsheets.slice(
+        const cheatsheetsToShow = cheatsheets.slice(
             this.scrollIndex,
-            this.scrollIndex + this.maxCardsPerPage
+            Math.min(
+                this.scrollIndex + this.maxCardsPerPage,
+                cheatsheets.length
+            )
         );
 
         cheatsheetsToShow.forEach((cheatsheet, index) => {
             const cardId = `card${this.scrollIndex + index + 1}`;
-
             const cardDTO = new CardDTO(
                 String(cheatsheet.id),
                 cheatsheet.name,

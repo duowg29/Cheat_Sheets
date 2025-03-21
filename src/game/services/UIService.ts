@@ -13,10 +13,11 @@ export default class UIService {
         const buttonSpacing = scene.scale.width * 0.02;
 
         classes.forEach((cls, index) => {
-            const buttonX =
-                scene.scale.width * 0.1 + index * (buttonWidth + buttonSpacing);
+            const buttonY =
+                scene.scale.width * 0.1 +
+                index * (buttonHeight + buttonSpacing);
             const button = scene.add
-                .text(buttonX, scene.scale.height * 0.05, cls.title, {
+                .text(scene.scale.width * 0.05, buttonY, cls.title, {
                     fontFamily: "Arial",
                     fontSize: `${scene.scale.width * 0.02}px`,
                     color: index === currentClassIndex ? "#000" : "#FFF",
@@ -26,7 +27,13 @@ export default class UIService {
                 })
                 .setInteractive()
                 .setOrigin(0.5);
+            button.on("pointerover", () => {
+                button.setScale(1.1); // Enlarge the button when hovered
+            });
 
+            button.on("pointerout", () => {
+                button.setScale(1); // Reset scale when hover ends
+            });
             button.on("pointerdown", () => callback(index));
             buttons.push(button);
         });

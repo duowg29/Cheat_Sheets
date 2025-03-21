@@ -34,27 +34,37 @@ export default class BoxService {
             })
             .setOrigin(0.5, 0);
 
-        const contentText = scene.add.text(
-            -boxWidth / 2 + padding,
-            -boxHeight / 2 + 90,
-            text,
-            {
-                fontFamily: "Arial",
-                fontSize: `${scene.scale.width * 0.015}px`,
-                color: "#000",
-                wordWrap: {
-                    width: boxWidth - padding * 2,
-                    useAdvancedWrap: true,
-                },
-                align: "left",
-            }
-        );
+        // const contentText = scene.add.text(
+        //     -boxWidth / 2 + padding,
+        //     -boxHeight / 2 + 90,
+        //     text,
+        //     {
+        //         fontFamily: "Arial",
+        //         fontSize: `${scene.scale.width * 0.015}px`,
+        //         color: "#000",
+        //         wordWrap: {
+        //             width: boxWidth - padding * 2,
+        //             useAdvancedWrap: true,
+        //         },
+        //         align: "left",
+        //     }
+        // );
 
-        box.add([background, titleText, contentText]);
+        box.add([
+            background,
+            titleText,
+            // ,contentText
+        ]);
 
         box.setSize(boxWidth, boxHeight);
         box.setInteractive();
+        box.on("pointerover", () => {
+            box.setScale(1.1); // Enlarge the box when hovered
+        });
 
+        box.on("pointerout", () => {
+            box.setScale(1); // Reset scale when hover ends
+        });
         box.on("pointerup", () => {
             console.log(`Box selected: ${title}`);
             scene.scene.start("DetailContentScene", {
