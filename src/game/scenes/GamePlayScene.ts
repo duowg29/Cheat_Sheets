@@ -49,7 +49,7 @@ export default class GamePlayScene extends Phaser.Scene {
 
         this.cheatsheetNameText = this.add
             .text(this.scale.width * 0.5, this.scale.height * 0.13, "", {
-                fontSize: `${this.scale.width * 0.02}px`,
+                fontSize: `${this.scale.width * 0.05}px`,
                 color: "#000",
                 fontStyle: "bold",
             })
