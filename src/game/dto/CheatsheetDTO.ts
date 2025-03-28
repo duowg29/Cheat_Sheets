@@ -1,21 +1,21 @@
 import HeaderDTO from "./HeaderDTO";
 
 export default class CheatsheetDTO {
-    private _id: number;
+    private _id: string;
     private _name: string;
     private _headers: HeaderDTO[];
 
-    constructor(id: number, name: string, headers: HeaderDTO[]) {
+    constructor(id: string, name: string, headers: HeaderDTO[]) {
         this._id = id;
         this._name = name;
         this._headers = headers;
     }
 
-    public get id(): number {
+    public get id(): string {
         return this._id;
     }
 
-    public set id(value: number) {
+    public set id(value: string) {
         this._id = value;
     }
 

@@ -1,58 +1,45 @@
 [
     {
-        "id": "lop1",
         "title": "Lớp 1",
         "cheatsheets": [
             {
-                "id": "sheet1",
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "id": "header1",
                         "title": "Số đếm từ 1 đến 100",
                         "contents": [
                             {
-                                "id": "content1",
                                 "text": "Học cách đếm số từ 1 đến 100"
                             },
                             {
-                                "id": "content2",
                                 "text": "Nhận diện số chẵn và số lẻ"
                             },
                             {
-                                "id": "content3",
                                 "text": "Thực hành đếm xuôi, đếm ngược"
                             }
                         ]
                     },
                     {
-                        "id": "header2",
                         "title": "So sánh số lượng và các số trong phạm vi 100",
                         "contents": [
                             {
-                                "id": "content4",
                                 "text": "Nhận biết số lớn hơn, số bé hơn, số bằng nhau"
                             },
                             {
-                                "id": "content5",
                                 "text": "Xếp thứ tự các số theo chiều tăng dần và giảm dần"
                             }
                         ]
                     },
                     {
-                        "id": "header3",
                         "title": "Phép cộng trong phạm vi 10",
                         "contents": [
                             {
-                                "id": "content6",
                                 "text": "Giới thiệu phép cộng và dấu cộng (+)"
                             },
                             {
-                                "id": "content7",
                                 "text": "Cộng hai số trong phạm vi 10"
                             },
                             {
-                                "id": "content8",
                                 "text": "Thực hành tính nhẩm và sử dụng que tính"
                             }
                         ]
@@ -60,371 +47,281 @@
                 ]
             },
             {
-                "id": "sheet2",
                 "name": "Bảng cửu chương - Dấu cộng",
                 "headers": [
                     {
-                        "id": "header4",
                         "title": "Bảng cửu chương 1",
                         "contents": [
-                            { "id": "content9", "text": "1 + 1 = 2" },
-                            { "id": "content10", "text": "1 + 2 = 3" },
-                            { "id": "content11", "text": "1 + 3 = 4" },
-                            { "id": "content12", "text": "1 + 4 = 5" },
-                            { "id": "content13", "text": "1 + 5 = 6" },
-                            { "id": "content14", "text": "1 + 6 = 7" },
-                            { "id": "content15", "text": "1 + 7 = 8" },
-                            { "id": "content16", "text": "1 + 8 = 9" },
-                            { "id": "content17", "text": "1 + 9 = 10" }
+                            { "text": "1 + 1 = 2" },
+                            { "text": "1 + 2 = 3" },
+                            { "text": "1 + 3 = 4" },
+                            { "text": "1 + 4 = 5" },
+                            { "text": "1 + 5 = 6" },
+                            { "text": "1 + 6 = 7" },
+                            { "text": "1 + 7 = 8" },
+                            { "text": "1 + 8 = 9" },
+                            { "text": "1 + 9 = 10" }
                         ]
                     },
                     {
-                        "id": "header5",
                         "title": "Bảng cửu chương 2",
                         "contents": [
-                            { "id": "content18", "text": "2 + 1 = 3" },
-                            { "id": "content19", "text": "2 + 2 = 4" },
-                            { "id": "content20", "text": "2 + 3 = 5" },
-                            { "id": "content21", "text": "2 + 4 = 6" },
-                            { "id": "content22", "text": "2 + 5 = 7" },
-                            { "id": "content23", "text": "2 + 6 = 8" },
-                            { "id": "content24", "text": "2 + 7 = 9" },
-                            { "id": "content25", "text": "2 + 8 = 10" },
-                            { "id": "content26", "text": "2 + 9 = 11" }
+                            { "text": "2 + 1 = 3" },
+                            { "text": "2 + 2 = 4" },
+                            { "text": "2 + 3 = 5" },
+                            { "text": "2 + 4 = 6" },
+                            { "text": "2 + 5 = 7" },
+                            { "text": "2 + 6 = 8" },
+                            { "text": "2 + 7 = 9" },
+                            { "text": "2 + 8 = 10" },
+                            { "text": "2 + 9 = 11" }
                         ]
                     },
                     {
-                        "id": "header6",
                         "title": "Bảng cửu chương 3",
                         "contents": [
-                            { "id": "content27", "text": "3 + 1 = 4" },
-                            { "id": "content28", "text": "3 + 2 = 5" },
-                            { "id": "content29", "text": "3 + 3 = 6" },
-                            { "id": "content30", "text": "3 + 4 = 7" },
-                            { "id": "content31", "text": "3 + 5 = 8" },
-                            { "id": "content32", "text": "3 + 6 = 9" },
-                            { "id": "content33", "text": "3 + 7 = 10" },
-                            { "id": "content34", "text": "3 + 8 = 11" },
-                            { "id": "content35", "text": "3 + 9 = 12" }
+                            { "text": "3 + 1 = 4" },
+                            { "text": "3 + 2 = 5" },
+                            { "text": "3 + 3 = 6" },
+                            { "text": "3 + 4 = 7" },
+                            { "text": "3 + 5 = 8" },
+                            { "text": "3 + 6 = 9" },
+                            { "text": "3 + 7 = 10" },
+                            { "text": "3 + 8 = 11" },
+                            { "text": "3 + 9 = 12" }
                         ]
                     },
                     {
-                        "id": "header7",
                         "title": "Bảng cửu chương 4",
                         "contents": [
-                            { "id": "content36", "text": "4 + 1 = 5" },
-                            { "id": "content37", "text": "4 + 2 = 6" },
-                            { "id": "content38", "text": "4 + 3 = 7" },
-                            { "id": "content39", "text": "4 + 4 = 8" },
-                            { "id": "content40", "text": "4 + 5 = 9" },
-                            { "id": "content41", "text": "4 + 6 = 10" },
-                            { "id": "content42", "text": "4 + 7 = 11" },
-                            { "id": "content43", "text": "4 + 8 = 12" },
-                            { "id": "content44", "text": "4 + 9 = 13" }
+                            { "text": "4 + 1 = 5" },
+                            { "text": "4 + 2 = 6" },
+                            { "text": "4 + 3 = 7" },
+                            { "text": "4 + 4 = 8" },
+                            { "text": "4 + 5 = 9" },
+                            { "text": "4 + 6 = 10" },
+                            { "text": "4 + 7 = 11" },
+                            { "text": "4 + 8 = 12" },
+                            { "text": "4 + 9 = 13" }
                         ]
                     },
                     {
-                        "id": "header8",
                         "title": "Bảng cửu chương 5",
                         "contents": [
-                            { "id": "content45", "text": "5 + 1 = 6" },
-                            { "id": "content47", "text": "5 + 2 = 7" },
-                            { "id": "content48", "text": "5 + 3 = 8" },
-                            { "id": "content49", "text": "5 + 4 = 9" },
-                            { "id": "content50", "text": "5 + 5 = 10" },
-                            { "id": "content51", "text": "5 + 6 = 11" },
-                            { "id": "content52", "text": "5 + 7 = 12" },
-                            { "id": "content53", "text": "5 + 8 = 13" },
-                            { "id": "content54", "text": "5 + 9 = 14" }
+                            { "text": "5 + 1 = 6" },
+                            { "text": "5 + 2 = 7" },
+                            { "text": "5 + 3 = 8" },
+                            { "text": "5 + 4 = 9" },
+                            { "text": "5 + 5 = 10" },
+                            { "text": "5 + 6 = 11" },
+                            { "text": "5 + 7 = 12" },
+                            { "text": "5 + 8 = 13" },
+                            { "text": "5 + 9 = 14" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet3",
                 "name": "Bảng cửu chương - Dấu trừ",
                 "headers": [
                     {
-                        "id": "header9",
                         "title": "Bảng cửu chương 1",
                         "contents": [
-                            { "id": "content55", "text": "1 - 1 = 0" },
-                            { "id": "content56", "text": "2 - 1 = 1" },
-                            { "id": "content57", "text": "3 - 1 = 2" },
-                            { "id": "content58", "text": "4 - 1 = 3" },
-                            { "id": "content59", "text": "5 - 1 = 4" },
-                            { "id": "content60", "text": "6 - 1 = 5" },
-                            { "id": "content61", "text": "7 - 1 = 6" },
-                            { "id": "content62", "text": "8 - 1 = 7" },
-                            { "id": "content63", "text": "9 - 1 = 8" }
+                            { "text": "1 - 1 = 0" },
+                            { "text": "2 - 1 = 1" },
+                            { "text": "3 - 1 = 2" },
+                            { "text": "4 - 1 = 3" },
+                            { "text": "5 - 1 = 4" },
+                            { "text": "6 - 1 = 5" },
+                            { "text": "7 - 1 = 6" },
+                            { "text": "8 - 1 = 7" },
+                            { "text": "9 - 1 = 8" }
                         ]
                     },
                     {
-                        "id": "header10",
                         "title": "Bảng cửu chương 2",
                         "contents": [
-                            { "id": "content64", "text": "2 - 2 = 0" },
-                            { "id": "content65", "text": "3 - 2 = 1" },
-                            { "id": "content66", "text": "4 - 2 = 2" },
-                            { "id": "content67", "text": "5 - 2 = 3" },
-                            { "id": "content68", "text": "6 - 2 = 4" },
-                            { "id": "content69", "text": "7 - 2 = 5" },
-                            { "id": "content70", "text": "8 - 2 = 6" },
-                            { "id": "content71", "text": "9 - 2 = 7" },
-                            { "id": "content72", "text": "10 - 2 = 8" }
+                            { "text": "2 - 2 = 0" },
+                            { "text": "3 - 2 = 1" },
+                            { "text": "4 - 2 = 2" },
+                            { "text": "5 - 2 = 3" },
+                            { "text": "6 - 2 = 4" },
+                            { "text": "7 - 2 = 5" },
+                            { "text": "8 - 2 = 6" },
+                            { "text": "9 - 2 = 7" },
+                            { "text": "10 - 2 = 8" }
                         ]
                     },
                     {
-                        "id": "header11",
                         "title": "Bảng cửu chương 3",
                         "contents": [
-                            { "id": "content73", "text": "3 - 3 = 0" },
-                            { "id": "content74", "text": "4 - 3 = 1" },
-                            { "id": "content75", "text": "5 - 3 = 2" },
-                            { "id": "content76", "text": "6 - 3 = 3" },
-                            { "id": "content77", "text": "7 - 3 = 4" },
-                            { "id": "content78", "text": "8 - 3 = 5" },
-                            { "id": "content79", "text": "9 - 3 = 6" },
-                            { "id": "content80", "text": "10 - 3 = 7" },
-                            { "id": "content81", "text": "11 - 3 = 8" }
+                            { "text": "3 - 3 = 0" },
+                            { "text": "4 - 3 = 1" },
+                            { "text": "5 - 3 = 2" },
+                            { "text": "6 - 3 = 3" },
+                            { "text": "7 - 3 = 4" },
+                            { "text": "8 - 3 = 5" },
+                            { "text": "9 - 3 = 6" },
+                            { "text": "10 - 3 = 7" },
+                            { "text": "11 - 3 = 8" }
                         ]
                     },
                     {
-                        "id": "header12",
                         "title": "Bảng cửu chương 4",
                         "contents": [
-                            { "id": "content82", "text": "4 - 4 = 0" },
-                            { "id": "content83", "text": "5 - 4 = 1" },
-                            { "id": "content84", "text": "6 - 4 = 2" },
-                            { "id": "content85", "text": "7 - 4 = 3" },
-                            { "id": "content86", "text": "8 - 4 = 4" },
-                            { "id": "content87", "text": "9 - 4 = 5" },
-                            { "id": "content88", "text": "10 - 4 = 6" },
-                            { "id": "content89", "text": "11 - 4 = 7" },
-                            { "id": "content90", "text": "12 - 4 = 8" }
+                            { "text": "4 - 4 = 0" },
+                            { "text": "5 - 4 = 1" },
+                            { "text": "6 - 4 = 2" },
+                            { "text": "7 - 4 = 3" },
+                            { "text": "8 - 4 = 4" },
+                            { "text": "9 - 4 = 5" },
+                            { "text": "10 - 4 = 6" },
+                            { "text": "11 - 4 = 7" },
+                            { "text": "12 - 4 = 8" }
                         ]
                     },
                     {
-                        "id": "header13",
                         "title": "Bảng cửu chương 5",
                         "contents": [
-                            { "id": "content91", "text": "5 - 5 = 0" },
-                            { "id": "content92", "text": "6 - 5 = 1" },
-                            { "id": "content93", "text": "7 - 5 = 2" },
-                            { "id": "content94", "text": "8 - 5 = 3" },
-                            { "id": "content95", "text": "9 - 5 = 4" },
-                            { "id": "content96", "text": "10 - 5 = 5" },
-                            { "id": "content97", "text": "11 - 5 = 6" },
-                            { "id": "content98", "text": "12 - 5 = 7" },
-                            { "id": "content99", "text": "13 - 5 = 8" }
+                            { "text": "5 - 5 = 0" },
+                            { "text": "6 - 5 = 1" },
+                            { "text": "7 - 5 = 2" },
+                            { "text": "8 - 5 = 3" },
+                            { "text": "9 - 5 = 4" },
+                            { "text": "10 - 5 = 5" },
+                            { "text": "11 - 5 = 6" },
+                            { "text": "12 - 5 = 7" },
+                            { "text": "13 - 5 = 8" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet4",
                 "name": "Bảng cửu chương - Nhân chia",
                 "headers": [
                     {
-                        "id": "header14",
                         "title": "Bảng cửu chương 1",
                         "contents": [
-                            { "id": "content100", "text": "1 × 1 = 1" },
-                            { "id": "content101", "text": "1 × 2 = 2" },
-                            { "id": "content102", "text": "1 × 3 = 3" },
-                            { "id": "content103", "text": "1 × 4 = 4" },
-                            { "id": "content104", "text": "1 × 5 = 5" },
-                            { "id": "content105", "text": "1 ÷ 1 = 1" },
-                            { "id": "content106", "text": "2 ÷ 1 = 2" },
-                            { "id": "content107", "text": "3 ÷ 1 = 3" },
-                            { "id": "content108", "text": "4 ÷ 1 = 4" }
-                        ]
-                    },
-                    {
-                        "id": "header15",
-                        "title": "Bảng cửu chương 2",
-                        "contents": [
-                            { "id": "content109", "text": "2 × 1 = 2" },
-                            { "id": "content110", "text": "2 × 2 = 4" },
-                            { "id": "content111", "text": "2 × 3 = 6" },
-                            { "id": "content112", "text": "2 × 4 = 8" },
-                            { "id": "content113", "text": "2 × 5 = 10" },
-                            { "id": "content114", "text": "2 ÷ 2 = 1" },
-                            { "id": "content115", "text": "4 ÷ 2 = 2" },
-                            { "id": "content116", "text": "6 ÷ 2 = 3" },
-                            { "id": "content117", "text": "8 ÷ 2 = 4" }
-                        ]
-                    },
-                    {
-                        "id": "header16",
-                        "title": "Bảng cửu chương 3",
-                        "contents": [
-                            { "id": "content118", "text": "3 × 1 = 3" },
-                            { "id": "content119", "text": "3 × 2 = 6" },
-                            { "id": "content120", "text": "3 × 3 = 9" },
-                            { "id": "content121", "text": "3 × 4 = 12" },
-                            { "id": "content122", "text": "3 × 5 = 15" },
-                            { "id": "content123", "text": "3 ÷ 3 = 1" },
-                            { "id": "content124", "text": "6 ÷ 3 = 2" },
-                            { "id": "content125", "text": "9 ÷ 3 = 3" },
-                            { "id": "content126", "text": "12 ÷ 3 = 4" }
-                        ]
-                    },
-                    {
-                        "id": "header17",
-                        "title": "Bảng cửu chương 4",
-                        "contents": [
-                            { "id": "content127", "text": "4 × 1 = 4" },
-                            { "id": "content128", "text": "4 × 2 = 8" },
-                            { "id": "content129", "text": "4 × 3 = 12" },
-                            { "id": "content130", "text": "4 × 4 = 16" },
-                            { "id": "content131", "text": "4 × 5 = 20" },
-                            { "id": "content132", "text": "4 ÷ 4 = 1" },
-                            { "id": "content133", "text": "8 ÷ 4 = 2" },
-                            { "id": "content134", "text": "12 ÷ 4 = 3" },
-                            { "id": "content135", "text": "16 ÷ 4 = 4" }
-                        ]
-                    },
-                    {
-                        "id": "header18",
-                        "title": "Bảng cửu chương 5",
-                        "contents": [
-                            { "id": "content136", "text": "5 × 1 = 5" },
-                            { "id": "content137", "text": "5 × 2 = 10" },
-                            { "id": "content138", "text": "5 × 3 = 15" },
-                            { "id": "content139", "text": "5 × 4 = 20" },
-                            { "id": "content140", "text": "5 × 5 = 25" },
-                            { "id": "content141", "text": "5 ÷ 5 = 1" },
-                            { "id": "content142", "text": "10 ÷ 5 = 2" },
-                            { "id": "content143", "text": "15 ÷ 5 = 3" },
-                            { "id": "content144", "text": "20 ÷ 5 = 4" }
+                            { "text": "1 × 1 = 1" },
+                            { "text": "1 × 2 = 2" },
+                            { "text": "1 × 3 = 3" },
+                            { "text": "1 × 4 = 4" },
+                            { "text": "1 × 5 = 5" },
+                            { "text": "1 ÷ 1 = 1" },
+                            { "text": "2 ÷ 1 = 2" },
+                            { "text": "3 ÷ 1 = 3" },
+                            { "text": "4 ÷ 1 = 4" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet5",
                 "name": "Bảng cửu chương - Dấu chia",
                 "headers": [
                     {
-                        "id": "header19",
                         "title": "Bảng cửu chương 1",
                         "contents": [
-                            { "id": "content145", "text": "1 ÷ 1 = 1" },
-                            { "id": "content146", "text": "2 ÷ 1 = 2" },
-                            { "id": "content147", "text": "3 ÷ 1 = 3" },
-                            { "id": "content148", "text": "4 ÷ 1 = 4" },
-                            { "id": "content149", "text": "5 ÷ 1 = 5" },
-                            { "id": "content150", "text": "6 ÷ 1 = 6" },
-                            { "id": "content151", "text": "7 ÷ 1 = 7" },
-                            { "id": "content152", "text": "8 ÷ 1 = 8" },
-                            { "id": "content153", "text": "9 ÷ 1 = 9" }
+                            { "text": "1 ÷ 1 = 1" },
+                            { "text": "2 ÷ 1 = 2" },
+                            { "text": "3 ÷ 1 = 3" },
+                            { "text": "4 ÷ 1 = 4" },
+                            { "text": "5 ÷ 1 = 5" },
+                            { "text": "6 ÷ 1 = 6" },
+                            { "text": "7 ÷ 1 = 7" },
+                            { "text": "8 ÷ 1 = 8" },
+                            { "text": "9 ÷ 1 = 9" }
                         ]
                     },
                     {
-                        "id": "header20",
                         "title": "Bảng cửu chương 2",
                         "contents": [
-                            { "id": "content154", "text": "2 ÷ 2 = 1" },
-                            { "id": "content155", "text": "4 ÷ 2 = 2" },
-                            { "id": "content156", "text": "6 ÷ 2 = 3" },
-                            { "id": "content157", "text": "8 ÷ 2 = 4" },
-                            { "id": "content158", "text": "10 ÷ 2 = 5" },
-                            { "id": "content159", "text": "12 ÷ 2 = 6" },
-                            { "id": "content160", "text": "14 ÷ 2 = 7" },
-                            { "id": "content161", "text": "16 ÷ 2 = 8" },
-                            { "id": "content162", "text": "18 ÷ 2 = 9" }
+                            { "text": "2 ÷ 2 = 1" },
+                            { "text": "4 ÷ 2 = 2" },
+                            { "text": "6 ÷ 2 = 3" },
+                            { "text": "8 ÷ 2 = 4" },
+                            { "text": "10 ÷ 2 = 5" },
+                            { "text": "12 ÷ 2 = 6" },
+                            { "text": "14 ÷ 2 = 7" },
+                            { "text": "16 ÷ 2 = 8" },
+                            { "text": "18 ÷ 2 = 9" }
                         ]
                     },
                     {
-                        "id": "header21",
                         "title": "Bảng cửu chương 3",
                         "contents": [
-                            { "id": "content163", "text": "3 ÷ 3 = 1" },
-                            { "id": "content164", "text": "6 ÷ 3 = 2" },
-                            { "id": "content165", "text": "9 ÷ 3 = 3" },
-                            { "id": "content166", "text": "12 ÷ 3 = 4" },
-                            { "id": "content167", "text": "15 ÷ 3 = 5" },
-                            { "id": "content168", "text": "18 ÷ 3 = 6" },
-                            { "id": "content169", "text": "21 ÷ 3 = 7" },
-                            { "id": "content170", "text": "24 ÷ 3 = 8" },
-                            { "id": "content171", "text": "27 ÷ 3 = 9" }
+                            { "text": "3 ÷ 3 = 1" },
+                            { "text": "6 ÷ 3 = 2" },
+                            { "text": "9 ÷ 3 = 3" },
+                            { "text": "12 ÷ 3 = 4" },
+                            { "text": "15 ÷ 3 = 5" },
+                            { "text": "18 ÷ 3 = 6" },
+                            { "text": "21 ÷ 3 = 7" },
+                            { "text": "24 ÷ 3 = 8" },
+                            { "text": "27 ÷ 3 = 9" }
                         ]
                     },
                     {
-                        "id": "header22",
                         "title": "Bảng cửu chương 4",
                         "contents": [
-                            { "id": "content172", "text": "4 ÷ 4 = 1" },
-                            { "id": "content173", "text": "8 ÷ 4 = 2" },
-                            { "id": "content174", "text": "12 ÷ 4 = 3" },
-                            { "id": "content175", "text": "16 ÷ 4 = 4" },
-                            { "id": "content176", "text": "20 ÷ 4 = 5" },
-                            { "id": "content177", "text": "24 ÷ 4 = 6" },
-                            { "id": "content178", "text": "28 ÷ 4 = 7" },
-                            { "id": "content179", "text": "32 ÷ 4 = 8" },
-                            { "id": "content180", "text": "36 ÷ 4 = 9" }
+                            { "text": "4 ÷ 4 = 1" },
+                            { "text": "8 ÷ 4 = 2" },
+                            { "text": "12 ÷ 4 = 3" },
+                            { "text": "16 ÷ 4 = 4" },
+                            { "text": "20 ÷ 4 = 5" },
+                            { "text": "24 ÷ 4 = 6" },
+                            { "text": "28 ÷ 4 = 7" },
+                            { "text": "32 ÷ 4 = 8" },
+                            { "text": "36 ÷ 4 = 9" }
                         ]
                     },
                     {
-                        "id": "header23",
                         "title": "Bảng cửu chương 5",
                         "contents": [
-                            { "id": "content181", "text": "5 ÷ 5 = 1" },
-                            { "id": "content182", "text": "10 ÷ 5 = 2" },
-                            { "id": "content183", "text": "15 ÷ 5 = 3" },
-                            { "id": "content184", "text": "20 ÷ 5 = 4" },
-                            { "id": "content185", "text": "25 ÷ 5 = 5" },
-                            { "id": "content186", "text": "30 ÷ 5 = 6" },
-                            { "id": "content187", "text": "35 ÷ 5 = 7" },
-                            { "id": "content188", "text": "40 ÷ 5 = 8" },
-                            { "id": "content189", "text": "45 ÷ 5 = 9" }
+                            { "text": "5 ÷ 5 = 1" },
+                            { "text": "10 ÷ 5 = 2" },
+                            { "text": "15 ÷ 5 = 3" },
+                            { "text": "20 ÷ 5 = 4" },
+                            { "text": "25 ÷ 5 = 5" },
+                            { "text": "30 ÷ 5 = 6" },
+                            { "text": "35 ÷ 5 = 7" },
+                            { "text": "40 ÷ 5 = 8" },
+                            { "text": "45 ÷ 5 = 9" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet6",
                 "name": "Các loại hình học",
                 "headers": [
                     {
-                        "id": "header24",
                         "title": "Hình vuông",
                         "contents": [
                             {
-                                "id": "content190",
                                 "text": "Hình vuông có 4 cạnh đều và 4 góc vuông"
                             },
                             {
-                                "id": "content191",
                                 "text": "Cách tính diện tích và chu vi của hình vuông"
                             }
                         ]
                     },
                     {
-                        "id": "header25",
                         "title": "Hình tròn",
                         "contents": [
                             {
-                                "id": "content192",
                                 "text": "Hình tròn có một đường tròn bao quanh và bán kính là khoảng cách từ tâm đến viền"
                             },
                             {
-                                "id": "content193",
                                 "text": "Cách tính diện tích và chu vi của hình tròn"
                             }
                         ]
                     },
                     {
-                        "id": "header26",
                         "title": "Hình chữ nhật",
                         "contents": [
                             {
-                                "id": "content194",
                                 "text": "Hình chữ nhật có 2 cặp cạnh đối diện song song và bằng nhau"
                             },
                             {
-                                "id": "content195",
                                 "text": "Cách tính diện tích và chu vi của hình chữ nhật"
                             }
                         ]
@@ -432,19 +329,15 @@
                 ]
             },
             {
-                "id": "sheet7",
                 "name": "Các loại góc",
                 "headers": [
                     {
-                        "id": "header27",
                         "title": "Góc vuông",
                         "contents": [
                             {
-                                "id": "content196",
                                 "text": "Góc vuông có độ lớn là 90 độ"
                             },
                             {
-                                "id": "content196",
                                 "text": "Góc vuông xuất hiện trong nhiều hình học cơ bản"
                             }
                         ],
@@ -458,29 +351,23 @@
                         }
                     },
                     {
-                        "id": "header28",
                         "title": "Góc nhọn",
                         "contents": [
                             {
-                                "id": "content197",
                                 "text": "Góc nhọn có độ lớn nhỏ hơn 90 độ"
                             },
                             {
-                                "id": "content198",
                                 "text": "Góc nhọn được tìm thấy trong các hình học phức tạp hơn"
                             }
                         ]
                     },
                     {
-                        "id": "header29",
                         "title": "Góc tù",
                         "contents": [
                             {
-                                "id": "content199",
                                 "text": "Góc tù có độ lớn lớn hơn 90 độ"
                             },
                             {
-                                "id": "content200",
                                 "text": "Góc tù thường gặp trong các hình tam giác không vuông"
                             }
                         ]
@@ -488,35 +375,28 @@
                 ]
             },
             {
-                "id": "sheet8",
                 "name": "Hằng đẳng thức đáng nhớ",
                 "headers": [
                     {
-                        "id": "header30",
                         "title": "(a + b)^2 = a^2 + 2ab + b^2",
                         "contents": [
                             {
-                                "id": "content201",
                                 "text": "Hằng đẳng thức này được sử dụng khi bình phương một tổng"
                             }
                         ]
                     },
                     {
-                        "id": "header31",
                         "title": "(a - b)^2 = a^2 - 2ab + b^2",
                         "contents": [
                             {
-                                "id": "content202",
                                 "text": "Hằng đẳng thức này áp dụng khi bình phương một hiệu"
                             }
                         ]
                     },
                     {
-                        "id": "header32",
                         "title": "a^2 - b^2 = (a + b)(a - b)",
                         "contents": [
                             {
-                                "id": "content203",
                                 "text": "Hằng đẳng thức này là công thức khai triển của phép trừ bình phương"
                             }
                         ]
@@ -524,238 +404,176 @@
                 ]
             },
             {
-                "id": "sheet9",
                 "name": "Phép cộng trong phạm vi 10",
                 "headers": [
                     {
-                        "id": "header33",
                         "title": "Cộng với 1",
                         "contents": [
-                            { "id": "content204", "text": "1 + 1 = 2" },
-                            { "id": "content205", "text": "2 + 1 = 3" },
-                            { "id": "content206", "text": "3 + 1 = 4" },
-                            { "id": "content207", "text": "4 + 1 = 5" },
-                            { "id": "content208", "text": "5 + 1 = 6" }
+                            { "text": "1 + 1 = 2" },
+                            { "text": "2 + 1 = 3" },
+                            { "text": "3 + 1 = 4" },
+                            { "text": "4 + 1 = 5" },
+                            { "text": "5 + 1 = 6" }
                         ]
                     },
                     {
-                        "id": "header34",
                         "title": "Cộng với 2",
                         "contents": [
-                            { "id": "content209", "text": "1 + 2 = 3" },
-                            { "id": "content210", "text": "2 + 2 = 4" },
-                            { "id": "content211", "text": "3 + 2 = 5" },
-                            { "id": "content212", "text": "4 + 2 = 6" },
-                            { "id": "content213", "text": "5 + 2 = 7" }
+                            { "text": "1 + 2 = 3" },
+                            { "text": "2 + 2 = 4" },
+                            { "text": "3 + 2 = 5" },
+                            { "text": "4 + 2 = 6" },
+                            { "text": "5 + 2 = 7" }
                         ]
                     },
                     {
-                        "id": "header35",
                         "title": "Cộng với 3",
                         "contents": [
-                            { "id": "content214", "text": "1 + 3 = 4" },
-                            { "id": "content215", "text": "2 + 3 = 5" },
-                            { "id": "content216", "text": "3 + 3 = 6" },
-                            { "id": "content217", "text": "4 + 3 = 7" },
-                            { "id": "content218", "text": "5 + 3 = 8" }
+                            { "text": "1 + 3 = 4" },
+                            { "text": "2 + 3 = 5" },
+                            { "text": "3 + 3 = 6" },
+                            { "text": "4 + 3 = 7" },
+                            { "text": "5 + 3 = 8" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet10",
                 "name": "Phép trừ trong phạm vi 10",
                 "headers": [
                     {
-                        "id": "header36",
                         "title": "Trừ đi 1",
                         "contents": [
-                            { "id": "content219", "text": "2 - 1 = 1" },
-                            { "id": "content220", "text": "3 - 1 = 2" },
-                            { "id": "content221", "text": "4 - 1 = 3" },
-                            { "id": "content222", "text": "5 - 1 = 4" },
-                            { "id": "content223", "text": "6 - 1 = 5" }
+                            { "text": "2 - 1 = 1" },
+                            { "text": "3 - 1 = 2" },
+                            { "text": "4 - 1 = 3" },
+                            { "text": "5 - 1 = 4" },
+                            { "text": "6 - 1 = 5" }
                         ]
                     },
                     {
-                        "id": "header37",
                         "title": "Trừ đi 2",
                         "contents": [
-                            { "id": "content224", "text": "3 - 2 = 1" },
-                            { "id": "content225", "text": "4 - 2 = 2" },
-                            { "id": "content226", "text": "5 - 2 = 3" },
-                            { "id": "content227", "text": "6 - 2 = 4" },
-                            { "id": "content228", "text": "7 - 2 = 5" }
+                            { "text": "3 - 2 = 1" },
+                            { "text": "4 - 2 = 2" },
+                            { "text": "5 - 2 = 3" },
+                            { "text": "6 - 2 = 4" },
+                            { "text": "7 - 2 = 5" }
                         ]
                     },
                     {
-                        "id": "header38",
                         "title": "Trừ đi 3",
                         "contents": [
-                            { "id": "content229", "text": "4 - 3 = 1" },
-                            { "id": "content230", "text": "5 - 3 = 2" },
-                            { "id": "content231", "text": "6 - 3 = 3" },
-                            { "id": "content232", "text": "7 - 3 = 4" },
-                            { "id": "content233", "text": "8 - 3 = 5" }
+                            { "text": "4 - 3 = 1" },
+                            { "text": "5 - 3 = 2" },
+                            { "text": "6 - 3 = 3" },
+                            { "text": "7 - 3 = 4" },
+                            { "text": "8 - 3 = 5" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet11",
                 "name": "Đếm số và hình vẽ",
                 "headers": [
                     {
-                        "id": "header39",
                         "title": "Đếm hình tròn",
                         "contents": [
-                            { "id": "content234", "text": "1 hình tròn" },
-                            { "id": "content235", "text": "2 hình tròn" },
-                            { "id": "content236", "text": "3 hình tròn" },
-                            { "id": "content237", "text": "4 hình tròn" },
-                            { "id": "content238", "text": "5 hình tròn" }
+                            { "text": "1 hình tròn" },
+                            { "text": "2 hình tròn" },
+                            { "text": "3 hình tròn" },
+                            { "text": "4 hình tròn" },
+                            { "text": "5 hình tròn" }
                         ]
                     },
                     {
-                        "id": "header40",
                         "title": "Đếm hình vuông",
                         "contents": [
-                            { "id": "content239", "text": "1 hình vuông" },
-                            { "id": "content240", "text": "2 hình vuông" },
-                            { "id": "content241", "text": "3 hình vuông" },
-                            { "id": "content242", "text": "4 hình vuông" },
-                            { "id": "content243", "text": "5 hình vuông" }
+                            { "text": "1 hình vuông" },
+                            { "text": "2 hình vuông" },
+                            { "text": "3 hình vuông" },
+                            { "text": "4 hình vuông" },
+                            { "text": "5 hình vuông" }
                         ]
                     },
                     {
-                        "id": "header41",
                         "title": "Đếm hình tam giác",
                         "contents": [
-                            { "id": "content244", "text": "1 hình tam giác" },
-                            { "id": "content245", "text": "2 hình tam giác" },
-                            { "id": "content246", "text": "3 hình tam giác" },
-                            { "id": "content247", "text": "4 hình tam giác" },
-                            { "id": "content248", "text": "5 hình tam giác" }
+                            { "text": "1 hình tam giác" },
+                            { "text": "2 hình tam giác" },
+                            { "text": "3 hình tam giác" },
+                            { "text": "4 hình tam giác" },
+                            { "text": "5 hình tam giác" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet12",
                 "name": "So sánh số trong phạm vi 10",
                 "headers": [
                     {
-                        "id": "header42",
                         "title": "Lớn hơn",
                         "contents": [
-                            { "id": "content249", "text": "2 > 1" },
-                            { "id": "content250", "text": "3 > 2" },
-                            { "id": "content251", "text": "4 > 3" },
-                            { "id": "content252", "text": "5 > 4" },
-                            { "id": "content253", "text": "6 > 5" }
+                            { "text": "2 > 1" },
+                            { "text": "3 > 2" },
+                            { "text": "4 > 3" },
+                            { "text": "5 > 4" },
+                            { "text": "6 > 5" }
                         ]
                     },
                     {
-                        "id": "header43",
                         "title": "Nhỏ hơn",
                         "contents": [
-                            { "id": "content254", "text": "1 < 2" },
-                            { "id": "content255", "text": "2 < 3" },
-                            { "id": "content256", "text": "3 < 4" },
-                            { "id": "content257", "text": "4 < 5" },
-                            { "id": "content258", "text": "5 < 6" }
+                            { "text": "1 < 2" },
+                            { "text": "2 < 3" },
+                            { "text": "3 < 4" },
+                            { "text": "4 < 5" },
+                            { "text": "5 < 6" }
                         ]
                     },
                     {
-                        "id": "header44",
                         "title": "Bằng nhau",
                         "contents": [
-                            { "id": "content259", "text": "1 = 1" },
-                            { "id": "content260", "text": "2 = 2" },
-                            { "id": "content261", "text": "3 = 3" },
-                            { "id": "content262", "text": "4 = 4" },
-                            { "id": "content263", "text": "5 = 5" }
+                            { "text": "1 = 1" },
+                            { "text": "2 = 2" },
+                            { "text": "3 = 3" },
+                            { "text": "4 = 4" },
+                            { "text": "5 = 5" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet13",
                 "name": "Đo độ dài cơ bản",
                 "headers": [
                     {
-                        "id": "header45",
                         "title": "Dùng gang tay",
                         "contents": [
-                            {
-                                "id": "content264",
-                                "text": "1 gang tay = chiều dài bàn tay"
-                            },
-                            {
-                                "id": "content265",
-                                "text": "2 gang tay = dài hơn 1 gang"
-                            },
-                            {
-                                "id": "content266",
-                                "text": "3 gang tay = dài hơn 2 gang"
-                            },
-                            {
-                                "id": "content267",
-                                "text": "Bút chì dài 1 gang tay"
-                            },
-                            {
-                                "id": "content268",
-                                "text": "Quyển sách dài 2 gang tay"
-                            }
+                            { "text": "1 gang tay = chiều dài bàn tay" },
+                            { "text": "2 gang tay = dài hơn 1 gang" },
+                            { "text": "3 gang tay = dài hơn 2 gang" },
+                            { "text": "Bút chì dài 1 gang tay" },
+                            { "text": "Quyển sách dài 2 gang tay" }
                         ]
                     },
                     {
-                        "id": "header46",
                         "title": "Dùng bước chân",
                         "contents": [
-                            {
-                                "id": "content269",
-                                "text": "1 bước chân = 1 lần bước"
-                            },
-                            {
-                                "id": "content270",
-                                "text": "2 bước chân = dài hơn 1 bước"
-                            },
-                            {
-                                "id": "content271",
-                                "text": "3 bước chân = dài hơn 2 bước"
-                            },
-                            {
-                                "id": "content272",
-                                "text": "Bàn học dài 2 bước chân"
-                            },
-                            {
-                                "id": "content273",
-                                "text": "Cửa lớp dài 3 bước chân"
-                            }
+                            { "text": "1 bước chân = 1 lần bước" },
+                            { "text": "2 bước chân = dài hơn 1 bước" },
+                            { "text": "3 bước chân = dài hơn 2 bước" },
+                            { "text": "Bàn học dài 2 bước chân" },
+                            { "text": "Cửa lớp dài 3 bước chân" }
                         ]
                     },
                     {
-                        "id": "header47",
                         "title": "So sánh độ dài",
                         "contents": [
-                            {
-                                "id": "content274",
-                                "text": "1 gang tay < 1 bước chân"
-                            },
-                            {
-                                "id": "content275",
-                                "text": "2 gang tay > 1 gang tay"
-                            },
-                            {
-                                "id": "content276",
-                                "text": "2 bước chân > 1 bước chân"
-                            },
-                            {
-                                "id": "content277",
-                                "text": "Bút chì < quyển sách"
-                            },
-                            { "id": "content278", "text": "Bàn học < cửa lớp" }
+                            { "text": "1 gang tay < 1 bước chân" },
+                            { "text": "2 gang tay > 1 gang tay" },
+                            { "text": "2 bước chân > 1 bước chân" },
+                            { "text": "Bút chì < quyển sách" },
+                            { "text": "Bàn học < cửa lớp" }
                         ]
                     }
                 ]
@@ -763,41 +581,32 @@
         ]
     },
     {
-        "id": "lop2",
         "title": "Lớp 2",
         "cheatsheets": [
             {
-                "id": "sheet1",
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "id": "header1",
                         "title": "Số đếm và số thứ tự",
                         "contents": [
                             {
-                                "id": "content1",
                                 "text": "Học cách đếm số từ 1 đến 1000, đọc và viết số"
                             },
                             {
-                                "id": "content2",
                                 "text": "Nhận diện số chẵn, số lẻ, số tròn chục, số tròn trăm"
                             },
                             {
-                                "id": "content3",
                                 "text": "Thực hành số thứ tự trong dãy số"
                             }
                         ]
                     },
                     {
-                        "id": "header2",
                         "title": "So sánh và sắp xếp số trong phạm vi 1000",
                         "contents": [
                             {
-                                "id": "content4",
                                 "text": "So sánh số lớn hơn, số bé hơn, số bằng nhau"
                             },
                             {
-                                "id": "content5",
                                 "text": "Sắp xếp các số theo thứ tự tăng dần, giảm dần"
                             }
                         ]
@@ -806,76 +615,57 @@
             }
         ]
     },
+
     {
-        "id": "lop3",
         "title": "Lớp 3",
         "cheatsheets": [
             {
-                "id": "sheet1",
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "id": "header1",
                         "title": "Số tự nhiên và số thứ tự",
                         "contents": [
+                            { "text": "Mở rộng phạm vi số đến 10.000" },
                             {
-                                "id": "content1",
-                                "text": "Mở rộng phạm vi số đến 10.000"
-                            },
-                            {
-                                "id": "content2",
                                 "text": "Đọc, viết, so sánh và sắp xếp số theo thứ tự"
                             },
                             {
-                                "id": "content3",
                                 "text": "Nhận diện số chẵn, số lẻ, số tròn chục, tròn trăm, tròn nghìn"
                             }
                         ]
                     },
                     {
-                        "id": "header2",
                         "title": "Phép cộng, trừ, nhân, chia số tự nhiên",
                         "contents": [
                             {
-                                "id": "content4",
                                 "text": "Thực hành cộng, trừ, nhân, chia số có nhiều chữ số"
                             },
                             {
-                                "id": "content5",
                                 "text": "Vận dụng quy tắc tính toán và thứ tự thực hiện phép tính trong biểu thức"
                             }
                         ]
                     },
                     {
-                        "id": "header3",
                         "title": "Nhân, chia số có ba chữ số cho số có một chữ số",
                         "contents": [
                             {
-                                "id": "content6",
                                 "text": "Thực hiện phép nhân, chia số có ba chữ số cho số có một chữ số"
                             },
-                            {
-                                "id": "content7",
-                                "text": "Áp dụng vào giải bài toán thực tế"
-                            }
+                            { "text": "Áp dụng vào giải bài toán thực tế" }
                         ]
                     }
                 ]
             },
             {
-                "id": "sheet2",
                 "name": "Giải bài toán có lời văn",
                 "headers": [
                     {
-                        "id": "header4",
                         "title": "Giải toán có lời văn",
                         "contents": [
                             {
-                                "id": "content8",
                                 "text": "Rèn luyện kỹ năng đọc, phân tích bài toán có lời văn"
                             },
                             {
-                                "id": "content9",
                                 "text": "Xác định dữ kiện và phép tính phù hợp"
                             }
                         ]
@@ -885,55 +675,41 @@
         ]
     },
     {
-        "id": "lop4",
         "title": "Lớp 4",
         "cheatsheets": [
             {
-                "id": "sheet1",
                 "name": "Toán - Số học nâng cao",
                 "headers": [
                     {
-                        "id": "header1",
                         "title": "Số tự nhiên và phân số",
                         "contents": [
+                            { "text": "Mở rộng phạm vi số đến 100.000" },
                             {
-                                "id": "content1",
-                                "text": "Mở rộng phạm vi số đến 100.000"
-                            },
-                            {
-                                "id": "content2",
                                 "text": "Đọc, viết, so sánh và sắp xếp số theo thứ tự"
                             },
                             {
-                                "id": "content3",
                                 "text": "Giới thiệu khái niệm phân số và cách đọc, viết phân số"
                             }
                         ]
                     },
                     {
-                        "id": "header2",
                         "title": "Phép cộng, trừ, nhân, chia số tự nhiên",
                         "contents": [
                             {
-                                "id": "content4",
                                 "text": "Thực hành cộng, trừ, nhân, chia số có nhiều chữ số"
                             },
                             {
-                                "id": "content5",
                                 "text": "Tìm hiểu về quy tắc nhân, chia một số với 10, 100, 1.000"
                             }
                         ]
                     },
                     {
-                        "id": "header3",
                         "title": "Phép nhân và chia phân số",
                         "contents": [
                             {
-                                "id": "content6",
                                 "text": "Học cách thực hiện phép nhân và chia hai phân số"
                             },
                             {
-                                "id": "content7",
                                 "text": "Áp dụng quy tắc nghịch đảo khi chia phân số"
                             }
                         ]
@@ -941,19 +717,15 @@
                 ]
             },
             {
-                "id": "sheet2",
                 "name": "Giải bài toán có lời văn",
                 "headers": [
                     {
-                        "id": "header4",
                         "title": "Giải bài toán có lời văn",
                         "contents": [
                             {
-                                "id": "content8",
                                 "text": "Luyện tập cách phân tích bài toán và xác định phép tính thích hợp"
                             },
                             {
-                                "id": "content9",
                                 "text": "Thực hành với các bài toán liên quan đến tỉ số, tổng - hiệu"
                             }
                         ]
@@ -963,47 +735,37 @@
         ]
     },
     {
-        "id": "lop5",
         "title": "Lớp 5",
         "cheatsheets": [
             {
-                "id": "sheet1",
                 "name": "Toán - Số học nâng cao",
                 "headers": [
                     {
-                        "id": "header1",
                         "title": "Số thập phân và phân số",
                         "contents": [
                             {
-                                "id": "content1",
                                 "text": "Học cách đọc, viết, so sánh và quy đổi giữa số thập phân và phân số"
                             },
                             {
-                                "id": "content2",
                                 "text": "Thực hành tính toán với số thập phân"
                             }
                         ]
                     },
                     {
-                        "id": "header2",
                         "title": "Phép cộng, trừ, nhân, chia số thập phân",
                         "contents": [
                             {
-                                "id": "content3",
                                 "text": "Thực hành các phép tính cộng, trừ, nhân, chia với số thập phân"
                             },
                             {
-                                "id": "content4",
                                 "text": "Áp dụng quy tắc làm tròn và tính nhẩm số thập phân"
                             }
                         ]
                     },
                     {
-                        "id": "header3",
                         "title": "Tỉ lệ và tỉ số",
                         "contents": [
                             {
-                                "id": "content5",
                                 "text": "Giới thiệu khái niệm tỉ số, tỉ lệ phần trăm và cách tính toán trong các bài toán thực tế"
                             }
                         ]
@@ -1011,15 +773,12 @@
                 ]
             },
             {
-                "id": "sheet2",
                 "name": "Giải bài toán có lời văn nâng cao",
                 "headers": [
                     {
-                        "id": "header4",
                         "title": "Giải bài toán có lời văn nâng cao",
                         "contents": [
                             {
-                                "id": "content6",
                                 "text": "Luyện tập giải các bài toán có lời văn phức tạp hơn liên quan đến nhiều phép tính kết hợp"
                             }
                         ]
@@ -1027,19 +786,15 @@
                 ]
             },
             {
-                "id": "sheet3",
                 "name": "Hình học mở rộng",
                 "headers": [
                     {
-                        "id": "header5",
                         "title": "Hình học mở rộng",
                         "contents": [
                             {
-                                "id": "content7",
                                 "text": "Học cách tính diện tích và chu vi của các hình phức tạp như hình thang, hình bình hành, hình tròn"
                             },
                             {
-                                "id": "content8",
                                 "text": "Giới thiệu khái niệm thể tích của hình hộp chữ nhật"
                             }
                         ]
@@ -1047,15 +802,12 @@
                 ]
             },
             {
-                "id": "sheet4",
                 "name": "Quản lý tài chính cá nhân cơ bản",
                 "headers": [
                     {
-                        "id": "header6",
                         "title": "Quản lý tài chính cá nhân cơ bản",
                         "contents": [
                             {
-                                "id": "content9",
                                 "text": "Học cách tính toán chi tiêu, tiết kiệm và hiểu giá trị của tiền tệ trong cuộc sống hàng ngày"
                             }
                         ]

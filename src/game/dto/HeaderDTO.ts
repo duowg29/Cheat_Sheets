@@ -1,7 +1,7 @@
 import ContentDTO from "./ContentDTO";
 
 export default class HeaderDTO {
-    private _id: number;
+    private _id: string;
     private _title: string;
     private _contents: ContentDTO[];
     image: {
@@ -14,7 +14,7 @@ export default class HeaderDTO {
     } | null; // Nếu không có hình ảnh, giá trị sẽ là null
 
     constructor(
-        id: number,
+        id: string,
         title: string,
         contents: ContentDTO[],
         image: {
@@ -32,11 +32,11 @@ export default class HeaderDTO {
         this.image = image;
     }
 
-    public get id(): number {
+    public get id(): string {
         return this._id;
     }
 
-    public set id(value: number) {
+    public set id(value: string) {
         this._id = value;
     }
 

@@ -1,17 +1,17 @@
 export default class ContentDTO {
-    private _id: number;
+    private _id: string;
     private _text: string;
 
-    constructor(id: number, text: string) {
+    constructor(id: string, text: string) {
         this._id = id;
         this._text = text;
     }
 
-    public get id(): number {
+    public get id(): string {
         return this._id;
     }
 
-    public set id(value: number) {
+    public set id(value: string) {
         this._id = value;
     }
 
