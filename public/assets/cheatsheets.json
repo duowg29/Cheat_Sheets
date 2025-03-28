@@ -6,41 +6,38 @@
                 "name": "Toán - Số học cơ bản",
                 "headers": [
                     {
-                        "title": "Số đếm từ 1 đến 100",
+                        "title": "Nhận diện số chẵn, số lẻ và số tròn chục",
                         "contents": [
                             {
-                                "text": "Học cách đếm số từ 1 đến 100"
+                                "text": "Số lẻ: Những con số không chia hết cho 2. Ví dụ: 1, 3, 5, 7…"
                             },
                             {
-                                "text": "Nhận diện số chẵn và số lẻ"
+                                "text": "Số chẵn: Những con số chia hết cho 2. Ví dụ: 2, 4, 6, 8…"
                             },
                             {
-                                "text": "Thực hành đếm xuôi, đếm ngược"
+                                "text": "Số tròn chục: Các số chia hết cho 10, thường có đuôi là 0. Ví dụ: 10, 20, 30, 40…"
                             }
                         ]
                     },
                     {
-                        "title": "So sánh số lượng và các số trong phạm vi 100",
+                        "title": "So sánh các số trong phạm vi 10",
                         "contents": [
                             {
-                                "text": "Nhận biết số lớn hơn, số bé hơn, số bằng nhau"
+                                "text": "Số A lớn hơn số B nếu A > B"
                             },
                             {
-                                "text": "Xếp thứ tự các số theo chiều tăng dần và giảm dần"
+                                "text": "Số A bé hơn số B nếu A < B"
                             }
                         ]
                     },
                     {
-                        "title": "Phép cộng trong phạm vi 10",
+                        "title": "Sắp xếp các số",
                         "contents": [
                             {
-                                "text": "Giới thiệu phép cộng và dấu cộng (+)"
+                                "text": "Sắp xếp giảm dần: Đặt các số theo thứ tự từ lớn nhất đến nhỏ nhất. Ví dụ: 9, 7, 5, 3, 1."
                             },
                             {
-                                "text": "Cộng hai số trong phạm vi 10"
-                            },
-                            {
-                                "text": "Thực hành tính nhẩm và sử dụng que tính"
+                                "text": "Sắp xếp tăng dần: Đặt các số theo thứ tự từ nhỏ nhất đến lớn nhất. Ví dụ: 1, 3, 5, 7, 9."
                             }
                         ]
                     }
@@ -207,10 +204,10 @@
                             { "text": "1 × 3 = 3" },
                             { "text": "1 × 4 = 4" },
                             { "text": "1 × 5 = 5" },
-                            { "text": "1 ÷ 1 = 1" },
-                            { "text": "2 ÷ 1 = 2" },
-                            { "text": "3 ÷ 1 = 3" },
-                            { "text": "4 ÷ 1 = 4" }
+                            { "text": "1 x 6 = 6" },
+                            { "text": "1 x 7 = 7" },
+                            { "text": "1 x 8 = 8" },
+                            { "text": "1 x 9 = 9" }
                         ]
                     }
                 ]
@@ -469,76 +466,6 @@
                             { "text": "6 - 3 = 3" },
                             { "text": "7 - 3 = 4" },
                             { "text": "8 - 3 = 5" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Đếm số và hình vẽ",
-                "headers": [
-                    {
-                        "title": "Đếm hình tròn",
-                        "contents": [
-                            { "text": "1 hình tròn" },
-                            { "text": "2 hình tròn" },
-                            { "text": "3 hình tròn" },
-                            { "text": "4 hình tròn" },
-                            { "text": "5 hình tròn" }
-                        ]
-                    },
-                    {
-                        "title": "Đếm hình vuông",
-                        "contents": [
-                            { "text": "1 hình vuông" },
-                            { "text": "2 hình vuông" },
-                            { "text": "3 hình vuông" },
-                            { "text": "4 hình vuông" },
-                            { "text": "5 hình vuông" }
-                        ]
-                    },
-                    {
-                        "title": "Đếm hình tam giác",
-                        "contents": [
-                            { "text": "1 hình tam giác" },
-                            { "text": "2 hình tam giác" },
-                            { "text": "3 hình tam giác" },
-                            { "text": "4 hình tam giác" },
-                            { "text": "5 hình tam giác" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "So sánh số trong phạm vi 10",
-                "headers": [
-                    {
-                        "title": "Lớn hơn",
-                        "contents": [
-                            { "text": "2 > 1" },
-                            { "text": "3 > 2" },
-                            { "text": "4 > 3" },
-                            { "text": "5 > 4" },
-                            { "text": "6 > 5" }
-                        ]
-                    },
-                    {
-                        "title": "Nhỏ hơn",
-                        "contents": [
-                            { "text": "1 < 2" },
-                            { "text": "2 < 3" },
-                            { "text": "3 < 4" },
-                            { "text": "4 < 5" },
-                            { "text": "5 < 6" }
-                        ]
-                    },
-                    {
-                        "title": "Bằng nhau",
-                        "contents": [
-                            { "text": "1 = 1" },
-                            { "text": "2 = 2" },
-                            { "text": "3 = 3" },
-                            { "text": "4 = 4" },
-                            { "text": "5 = 5" }
                         ]
                     }
                 ]
