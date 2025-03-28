@@ -48,9 +48,10 @@ sửa lại tính năng responsive(khi resize window thì không được thay �
 xuất ảnh pdf (watermark) có ảnh, họa tiết trang trí
 tìm kiếm
 thêm các chế độ zoom
-respon theo chiều ngang
-thêm tên cho cheatsheet
-màu chữ, màu nền , hiệu ứng chữ (chỉ lúc xem trên ưeb còn in r thì không) thêm hiệu ứng chuyển đổi giữa các header (làm thư viện text animation(common))
+màu chữ, màu nền , hiệu ứng chữ (chỉ lúc xem trên web còn in r thì không) thêm hiệu ứng chuyển đổi giữa các header (làm thư viện text animation(common))
+gồm một bảng cửu chương và gồm nhiều các thuộc tính (Bấm vào thay đổi các thuộc tính như phép hay dấu) hạn chế để scroll
+chỉ gồm 2 lv (chọn lớp và cheetsheets) tức là bỏ detailcontent scene đi, vào sẽ hiện thẳng luôn.
+tạo các module riêng để thực hiện thay đổi các UI để sau còn config được
 
 # worksheet
 

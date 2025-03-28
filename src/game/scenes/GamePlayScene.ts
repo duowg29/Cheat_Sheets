@@ -61,7 +61,7 @@ export default class GamePlayScene extends Phaser.Scene {
                 shadow: {
                     offsetX: 2,
                     offsetY: 2,
-                    color: "#000",
+                    color: "#7f8c8d",
                     blur: 4,
                     stroke: true,
                     fill: true,
@@ -103,7 +103,6 @@ export default class GamePlayScene extends Phaser.Scene {
             (dir) => this.scrollPage(dir)
         );
 
-        // Tạo nút Up
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,

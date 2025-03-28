@@ -20,9 +20,9 @@ export default class UIService {
                 .text(scene.scale.width * 0.05, buttonY, cls.title, {
                     fontFamily: "Arial",
                     fontSize: `${scene.scale.width * 0.02}px`,
-                    color: index === currentClassIndex ? "#000" : "#FFF",
+                    color: index === currentClassIndex ? "#000" : "#7f8c8d",
                     backgroundColor:
-                        index === currentClassIndex ? "#FFD700" : "#000",
+                        index === currentClassIndex ? " 0x3498db" : "#000",
                     padding: { left: 10, right: 10, top: 5, bottom: 5 },
                 })
                 .setInteractive()
@@ -34,7 +34,7 @@ export default class UIService {
             button.on("pointerout", () => {
                 button.setScale(1);
             });
-            button.on("pointerdown", () => callback(index));
+            button.on("pointerup", () => callback(index));
             buttons.push(button);
         });
 
@@ -48,7 +48,7 @@ export default class UIService {
         buttons.forEach((button, index) => {
             button.setColor(index === currentClassIndex ? "#000" : "#FFF");
             button.setBackgroundColor(
-                index === currentClassIndex ? "#FFD700" : "#000"
+                index === currentClassIndex ? " 0x3498db" : "#7f8c8d"
             );
         });
     }

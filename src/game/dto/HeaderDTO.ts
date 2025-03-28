@@ -11,7 +11,7 @@ export default class HeaderDTO {
         width: number;
         height: number;
         rotation: number;
-    } | null; // Nếu không có hình ảnh, giá trị sẽ là null
+    } | null;
 
     constructor(
         id: string,
