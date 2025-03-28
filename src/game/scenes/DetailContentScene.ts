@@ -5,7 +5,7 @@ export default class DetailContentScene extends Phaser.Scene {
     private headerTitleText!: Phaser.GameObjects.Text;
     private contentText!: Phaser.GameObjects.Text;
     private background!: Phaser.GameObjects.Rectangle;
-    private container!: Phaser.GameObjects.Container; // Define the container for content
+    private container!: Phaser.GameObjects.Container;
 
     constructor() {
         super({ key: "DetailContentScene" });
@@ -25,6 +25,10 @@ export default class DetailContentScene extends Phaser.Scene {
             return;
         }
 
+        this.add
+            .rectangle(0, 0, this.scale.width, this.scale.height, 0xe6f0fa)
+            .setOrigin(0);
+
         this.container = this.add.container(
             this.scale.width * 0.5,
             this.scale.height * 0.5
@@ -36,10 +40,11 @@ export default class DetailContentScene extends Phaser.Scene {
                 0,
                 this.scale.width * 0.5,
                 this.scale.height * 0.7,
-                0xffffff
+                0xffffff,
+                0.95
             )
             .setOrigin(0.5)
-            .setStrokeStyle(4, 0x000000);
+            .setStrokeStyle(2, 0x3498db);
         this.container.add(this.background);
 
         this.headerTitleText = this.add
@@ -50,9 +55,17 @@ export default class DetailContentScene extends Phaser.Scene {
                 {
                     fontFamily: "Arial",
                     fontSize: `${this.scale.width * 0.06}px`,
-                    color: "#333",
+                    color: "#2c3e50",
                     fontStyle: "bold",
                     align: "center",
+                    shadow: {
+                        offsetX: 2,
+                        offsetY: 2,
+                        color: "#000",
+                        blur: 4,
+                        stroke: true,
+                        fill: true,
+                    },
                 }
             )
             .setOrigin(0.5);
@@ -65,11 +78,19 @@ export default class DetailContentScene extends Phaser.Scene {
             .text(0, 0, contentString, {
                 fontFamily: "Arial",
                 fontSize: `${this.scale.width * 0.02}px`,
-                color: "#555",
+                color: "#34495e",
                 align: "center",
                 wordWrap: {
-                    width: this.scale.width * 0.7,
+                    width: this.scale.width * 0.45,
                     useAdvancedWrap: true,
+                },
+                shadow: {
+                    offsetX: 1,
+                    offsetY: 1,
+                    color: "#000",
+                    blur: 2,
+                    stroke: true,
+                    fill: true,
                 },
             })
             .setOrigin(0.5);
@@ -92,23 +113,31 @@ export default class DetailContentScene extends Phaser.Scene {
             .text(this.scale.width * 0.03, this.scale.height * 0.03, "Back", {
                 fontFamily: "Arial",
                 fontSize: `${this.scale.width * 0.03}px`,
-                color: "#FFF",
-                backgroundColor: "#000",
-                padding: { left: 10, right: 10, top: 5, bottom: 5 },
+                color: "#fff",
+                backgroundColor: "#e74c3c",
+                padding: { left: 15, right: 15, top: 8, bottom: 8 },
+                shadow: {
+                    offsetX: 2,
+                    offsetY: 2,
+                    color: "#000",
+                    blur: 4,
+                    stroke: true,
+                    fill: true,
+                },
             })
             .setInteractive()
-            .setOrigin(0);
-
-        backButton.on("pointerover", () => {
-            backButton.setScale(1.1);
-        });
-        backButton.on("pointerout", () => {
-            backButton.setScale(1);
-        });
-
-        backButton.on("pointerup", () => {
-            this.scene.stop("DetailContentScene");
-            this.scene.start("GamePlayScene");
-        });
+            .setOrigin(0)
+            .on("pointerover", () => {
+                backButton.setBackgroundColor("#c0392b");
+                backButton.setScale(1.1);
+            })
+            .on("pointerout", () => {
+                backButton.setBackgroundColor("#e74c3c");
+                backButton.setScale(1);
+            })
+            .on("pointerup", () => {
+                this.scene.stop("DetailContentScene");
+                this.scene.start("GamePlayScene");
+            });
     }
 }

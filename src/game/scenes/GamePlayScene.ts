@@ -1,3 +1,4 @@
+import Phaser from "phaser";
 import ClassDTO from "../dto/ClassDTO";
 import DataService from "../services/DataService";
 import UIService from "../services/UIService";
@@ -28,6 +29,10 @@ export default class GamePlayScene extends Phaser.Scene {
     }
 
     create(): void {
+        this.add
+            .rectangle(0, 0, this.scale.width, this.scale.height, 0xe6f0fa)
+            .setOrigin(0);
+
         const jsonData = this.cache.json.get("cheatsheets");
         this.classes = DataService.loadClasses(jsonData);
 
@@ -47,11 +52,48 @@ export default class GamePlayScene extends Phaser.Scene {
             }
         );
 
+        this.classButtons.forEach((button) => {
+            button.setStyle({
+                fontSize: `${this.scale.width * 0.02}px`,
+                color: "#fff",
+                backgroundColor: "#7f8c8d",
+                padding: { left: 15, right: 15, top: 8, bottom: 8 },
+                shadow: {
+                    offsetX: 2,
+                    offsetY: 2,
+                    color: "#000",
+                    blur: 4,
+                    stroke: true,
+                    fill: true,
+                },
+            });
+            button.on("pointerover", () => {
+                button.setBackgroundColor("#95a5a6");
+                button.setScale(1.05);
+            });
+            button.on("pointerout", () => {
+                button.setBackgroundColor(
+                    this.classButtons.indexOf(button) === this.currentClassIndex
+                        ? "#3498db"
+                        : "#7f8c8d"
+                );
+                button.setScale(1);
+            });
+        });
+
         this.cheatsheetNameText = this.add
             .text(this.scale.width * 0.5, this.scale.height * 0.13, "", {
-                fontSize: `${this.scale.width * 0.02}px`,
-                color: "#000",
+                fontSize: `${this.scale.width * 0.03}px`,
+                color: "#2c3e50",
                 fontStyle: "bold",
+                shadow: {
+                    offsetX: 2,
+                    offsetY: 2,
+                    color: "#000",
+                    blur: 4,
+                    stroke: true,
+                    fill: true,
+                },
             })
             .setOrigin(0.5);
 
@@ -61,28 +103,56 @@ export default class GamePlayScene extends Phaser.Scene {
             (dir) => this.scrollPage(dir)
         );
 
+        // Tạo nút Up
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,
-                color: "#FFF",
-                backgroundColor: "#000",
-                padding: { left: 10, right: 10, top: 5, bottom: 5 },
+                color: "#fff",
+                backgroundColor: "#3498db",
+                padding: { left: 15, right: 15, top: 10, bottom: 10 },
+                shadow: {
+                    offsetX: 2,
+                    offsetY: 2,
+                    color: "#000",
+                    blur: 4,
+                    stroke: true,
+                    fill: true,
+                },
             })
             .setInteractive()
-            .setOrigin(0.5);
+            .setOrigin(0.5)
+            .on("pointerover", () => {
+                this.upButton.setBackgroundColor("#2980b9");
+            })
+            .on("pointerout", () => {
+                this.upButton.setBackgroundColor("#3498db");
+            })
+            .on("pointerdown", () => this.scrollPage(-1));
 
         this.downButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.6, "▼", {
                 fontSize: `${this.scale.width * 0.03}px`,
-                color: "#FFF",
-                backgroundColor: "#000",
-                padding: { left: 10, right: 10, top: 5, bottom: 5 },
+                color: "#fff",
+                backgroundColor: "#3498db",
+                padding: { left: 15, right: 15, top: 10, bottom: 10 },
+                shadow: {
+                    offsetX: 2,
+                    offsetY: 2,
+                    color: "#000",
+                    blur: 4,
+                    stroke: true,
+                    fill: true,
+                },
             })
             .setInteractive()
-            .setOrigin(0.5);
-
-        this.upButton.on("pointerdown", () => this.scrollPage(-1));
-        this.downButton.on("pointerdown", () => this.scrollPage(1));
+            .setOrigin(0.5)
+            .on("pointerover", () => {
+                this.downButton.setBackgroundColor("#2980b9");
+            })
+            .on("pointerout", () => {
+                this.downButton.setBackgroundColor("#3498db");
+            })
+            .on("pointerdown", () => this.scrollPage(1));
 
         this.events.on("card-selected", (cardDTO: CardDTO) => {
             console.log("Card selected:", cardDTO.header);
@@ -104,6 +174,7 @@ export default class GamePlayScene extends Phaser.Scene {
 
         this.updatePage();
     }
+
     private changeCheatsheet(direction: number): void {
         this.currentCheatsheetIndex = Phaser.Math.Wrap(
             this.currentCheatsheetIndex + direction,
@@ -162,12 +233,49 @@ export default class GamePlayScene extends Phaser.Scene {
 
             const card = CardService.createCard(this, cardX, cardY, cardDTO);
 
-            card.setInteractive().on("pointerup", () => {
-                console.log(
-                    `Card selected: ${cardDTO.header} (ID: ${cardDTO.id})`
-                );
-                this.events.emit("card-selected", cardDTO);
+            card.list.forEach((child: any) => {
+                if (child instanceof Phaser.GameObjects.Rectangle) {
+                    child.setFillStyle(0xffffff, 0.95);
+                    child.setStrokeStyle(2, 0x3498db);
+                } else if (child instanceof Phaser.GameObjects.Text) {
+                    child.setColor("#34495e");
+                    child.setShadow(1, 1, "#000", 2, true, true);
+                }
             });
+
+            card.setInteractive()
+                .on("pointerup", () => {
+                    console.log(
+                        `Card selected: ${cardDTO.header} (ID: ${cardDTO.id})`
+                    );
+                    this.events.emit("card-selected", cardDTO);
+                })
+                .on("pointerover", () => {
+                    this.tweens.add({
+                        targets: card,
+                        scale: 1.05,
+                        duration: 200,
+                        ease: "Power2",
+                    });
+                    card.list.forEach((child: any) => {
+                        if (child instanceof Phaser.GameObjects.Rectangle) {
+                            child.setFillStyle(0xe6f0fa, 1);
+                        }
+                    });
+                })
+                .on("pointerout", () => {
+                    this.tweens.add({
+                        targets: card,
+                        scale: 1,
+                        duration: 200,
+                        ease: "Power2",
+                    });
+                    card.list.forEach((child: any) => {
+                        if (child instanceof Phaser.GameObjects.Rectangle) {
+                            child.setFillStyle(0xffffff, 0.95);
+                        }
+                    });
+                });
 
             this.cards.push(card);
         });
