@@ -53,85 +53,33 @@ export default class MenuContentScene extends Phaser.Scene {
             )
             .setOrigin(0.5);
 
-        if (!this.cheatsheet || !this.cheatsheet.headers) {
-            console.error(
-                "Cheatsheet or headers are missing in MenuContentScene."
-            );
-            return;
-        }
-
         const headers = this.cheatsheet.headers;
+        const numCols = 2;
+        const rowSpacing = 20;
+
+        const columnHeights: number[] = [
+            this.scale.height * 0.1,
+            this.scale.height * 0.1,
+        ];
 
         headers.forEach((header: any, index: number) => {
-            const row = Math.floor(index / 2);
-            const col = index % 2;
-
+            const col = index % numCols;
             const boxX = this.scale.width * (0.3 + col * 0.4);
-            const boxY = this.scale.height * (0.25 + row * 0.25);
+            const boxY = columnHeights[col];
 
             const box = BoxService.createBox(
                 this,
                 boxX,
                 boxY,
                 header.title,
-                header.contents
-                    .map((c: ContentDTO) => c.text)
-                    .join("\n")
-                    .substring(0, 50) + "..."
+                header.contents.map((c: ContentDTO) => c.text).join("\n")
             );
 
-            box.setSize(this.scale.width * 0.3, this.scale.height * 0.2);
-
-            // Tùy chỉnh giao diện box
-            box.list.forEach((child: any) => {
-                if (child instanceof Phaser.GameObjects.Rectangle) {
-                    child.setFillStyle(0xffffff, 0.95);
-                    child.setStrokeStyle(2, 0x3498db);
-                } else if (child instanceof Phaser.GameObjects.Text) {
-                    child.setColor("#34495e");
-                    child.setShadow(1, 1, "#000", 2, true, true);
-                }
-            });
-
-            // Thêm hiệu ứng hover cho box
-            box.setInteractive()
-                .on("pointerup", () => {
-                    this.currentHeaderIndex = index;
-                    this.scene.start("DetailContentScene", {
-                        header: header,
-                    });
-                })
-                .on("pointerover", () => {
-                    this.tweens.add({
-                        targets: box,
-                        scale: 1.05,
-                        duration: 200,
-                        ease: "Power2",
-                    });
-                    box.list.forEach((child: any) => {
-                        if (child instanceof Phaser.GameObjects.Rectangle) {
-                            child.setFillStyle(0xe6f0fa, 1);
-                        }
-                    });
-                })
-                .on("pointerout", () => {
-                    this.tweens.add({
-                        targets: box,
-                        scale: 1,
-                        duration: 200,
-                        ease: "Power2",
-                    });
-                    box.list.forEach((child: any) => {
-                        if (child instanceof Phaser.GameObjects.Rectangle) {
-                            child.setFillStyle(0xffffff, 0.95);
-                        }
-                    });
-                });
+            columnHeights[col] += box.height + rowSpacing;
 
             this.boxes.push(box);
         });
 
-        // Tạo nút Up
         this.upButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.4, "▲", {
                 fontSize: `${this.scale.width * 0.03}px`,
@@ -157,7 +105,6 @@ export default class MenuContentScene extends Phaser.Scene {
             })
             .on("pointerdown", () => this.scrollPage(-1));
 
-        // Tạo nút Down
         this.downButton = this.add
             .text(this.scale.width * 0.95, this.scale.height * 0.6, "▼", {
                 fontSize: `${this.scale.width * 0.03}px`,
@@ -188,7 +135,7 @@ export default class MenuContentScene extends Phaser.Scene {
                 fontFamily: "Arial",
                 fontSize: `${this.scale.width * 0.03}px`,
                 color: "#fff",
-                backgroundColor: "#e74c3c", // Màu đỏ
+                backgroundColor: "#e74c3c",
                 padding: { left: 15, right: 15, top: 8, bottom: 8 },
                 shadow: {
                     offsetX: 2,
