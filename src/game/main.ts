@@ -4,7 +4,6 @@ import LoadingScene from "./scenes/LoadingScene";
 import MainGame from "./scenes/Game";
 import GamePlayScene from "./scenes/GamePlayScene";
 import MenuContentScene from "./scenes/MenuContentScene";
-import DetailContentScene from "./scenes/DetailContentScene";
 
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config: Phaser.Types.Core.GameConfig = {
@@ -35,7 +34,7 @@ const config: Phaser.Types.Core.GameConfig = {
             debugShowVelocity: false,
         },
     },
-    scene: [GamePlayScene, MenuContentScene, DetailContentScene],
+    scene: [GamePlayScene, MenuContentScene],
 };
 
 const StartGame = (parent: string) => {
